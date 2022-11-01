@@ -21,75 +21,58 @@ export default function NavBar({ navbar }: navBarProps) {
       <>
          <div className="fixed z-20 w-full">
             <div className="glass">
-               <div
-                  className={
-                     'navbar transition-all duration-300 ' +
-                     (navbar
-                        ? 'bg-[#212b36] text-white'
-                        : 'bg-primary text-base-100')
-                  }
-               >
+               <div className="navbar bg-primary/90">
                   <div className="max-w-6xl mx-auto w-full px-4">
                      <div className="flex-1">
-                        <div
-                           className={
-                              'w-28 h-auto transition-all duration-300 text-center mt-2 '
-                           }
-                        >
-                           {navbar ? (
-                              <a>
-                                 <Image
-                                    src={LogoActiveImg}
-                                    alt="logo"
-                                    className="object-contain"
-                                 />
-                              </a>
-                           ) : (
-                              <a>
-                                 <Image
-                                    src={LogoImg}
-                                    alt="logo"
-                                    className="object-contain"
-                                 />
-                              </a>
-                           )}
-                        </div>
+                        <Image
+                           src={LogoActiveImg}
+                           alt="logo"
+                           width={140}
+                           className="object-contain"
+                        />
                      </div>
 
                      <div className="flex-none hidden md:flex">
                         {/* para desktop */}
-                        <div className="text-sm text-base-100 flex gap-10">
-                           <button>
-                              <a className="font-medium">Como funciona</a>
-                           </button>
+                        <ul className="text-sm menu menu-horizontal text-base-100 gap-10">
+                           <li>
+                              <a href="#entenda" className="font-medium">
+                                 Como funciona
+                              </a>
+                           </li>
 
-                           <button>
-                              <a className="font-medium">Diferenciais</a>
-                           </button>
+                           <li>
+                              <a href="#compare" className="font-medium">
+                                 Diferenciais
+                              </a>
+                           </li>
 
-                           <button>
-                              <a className="font-medium">Depoimentos</a>
-                           </button>
+                           <li>
+                              <a href="#contato" className="font-medium">
+                                 Contato
+                              </a>
+                           </li>
 
-                           <button>
-                              <a className="font-medium">Contato</a>
-                           </button>
+                           <li>
+                              <a href="#depoimentos" className="font-medium">
+                                 Depoimentos
+                              </a>
+                           </li>
 
-                           <button>
+                           <li>
                               <a className="font-medium">Blog</a>
-                           </button>
+                           </li>
 
-                           <button className="btn bg-base-100 normal-case rounded-xl transition-all duration-300 text-primary">
-                              Ir para loja
-                           </button>
-                        </div>
+                           <a href="https://www.buyphone.com.br/">
+                              <button className="btn bg-base-100 normal-case rounded-xl transition-all duration-300 text-primary">
+                                 Ir para loja
+                              </button>
+                           </a>
+                        </ul>
                      </div>
-                     <button className="block md:hidden" onClick={toggleDrawer}>
+                     <li className="block md:hidden" onClick={toggleDrawer}>
                         <svg
-                           className={
-                              'swap-off fill-current ' +
-                              (navbar ? 'text-white' : 'text-[#212b36]')
-                           }
+                           className="swap-off fill-current text-white"
                            xmlns="http://www.w3.org/2000/svg"
                            width="32"
                            height="32"
@@ -97,7 +80,7 @@ export default function NavBar({ navbar }: navBarProps) {
                         >
                            <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
                         </svg>
-                     </button>
+                     </li>
                      {/* para mobile */}
                   </div>
                </div>
@@ -110,60 +93,42 @@ export default function NavBar({ navbar }: navBarProps) {
             onClose={toggleDrawer}
             direction="top"
             duration={400}
-            className={
-               'w-auto h-auto ' +
-               (navbar ? 'bg-[#212b36] text-white' : 'bg-white text-[#212b36]')
-            }
+            className="w-auto h-auto bg-primary"
          >
-            <ul className="flex flex-col max-w-md mx-auto text-lg py-10">
-               <button
-                  className={
-                     'p-2 ' + (navbar ? 'text-white' : 'text-[#212b36]')
-                  }
-                  onClick={toggleDrawer}
-               >
-                  <a className="font-medium">Entenda melhor</a>
-               </button>
+            <ul className="menu p-5 items-center text-white">
+               <li className="p-2" onClick={toggleDrawer}>
+                  <a href="#entenda" className="font-medium">
+                     Entenda melhor
+                  </a>
+               </li>
 
-               <button
-                  className={
-                     'p-2 ' + (navbar ? 'text-white' : 'text-[#212b36]')
-                  }
-                  onClick={toggleDrawer}
-               >
-                  <a className="font-medium">Como funciona</a>
-               </button>
+               <li className="p-2" onClick={toggleDrawer}>
+                  <a href="#compare" className="font-medium">
+                     Diferenciais
+                  </a>
+               </li>
 
-               <button
-                  className={
-                     'p-2 ' + (navbar ? 'text-white' : 'text-[#212b36]')
-                  }
-                  onClick={toggleDrawer}
-               >
-                  <a className="font-medium">Depoimentos</a>
-               </button>
+               <li className="p-2" onClick={toggleDrawer}>
+                  <a href="#contato" className="font-medium">
+                     Contato
+                  </a>
+               </li>
 
-               <button
-                  className={
-                     'p-2 ' + (navbar ? 'text-white' : 'text-[#212b36]')
-                  }
-                  onClick={toggleDrawer}
-               >
-                  <a className="font-medium">Dúvidas</a>
-               </button>
+               <li className="p-2" onClick={toggleDrawer}>
+                  <a href="#depoimentos" className="font-medium">
+                     Depoimentos
+                  </a>
+               </li>
 
-               <button
-                  className={
-                     'p-2 ' + (navbar ? 'text-white' : 'text-[#212b36]')
-                  }
-                  onClick={toggleDrawer}
-               >
-                  <a className="font-medium">Quem somos</a>
-               </button>
+               <li className="p-2" onClick={toggleDrawer}>
+                  <a className="font-medium">Blog</a>
+               </li>
 
-               <button className="btn btn-error py-1 rounded-xl transition-all duration-300 text-white">
-                  <a>Cadastrar</a>
-               </button>
+               <a href="https://www.buyphone.com.br/">
+                  <button className="btn bg-white text-primary">
+                     Ir para loja
+                  </button>
+               </a>
             </ul>
          </Drawer>
       </>

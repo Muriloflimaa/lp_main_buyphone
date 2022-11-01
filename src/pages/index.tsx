@@ -153,7 +153,7 @@ const Home: NextPage = () => {
                </div>
             </div>
          </div>
-         <div className="bg-base-200">
+         <div id="entenda" className="bg-base-200">
             <div className="flex mx-auto max-w-6xl px-4 py-20 flex-col relative">
                <div className="text-center flex flex-col items-center">
                   <h1 className="text-primary/10 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
@@ -360,7 +360,7 @@ const Home: NextPage = () => {
                </div>
             </div>
          </div>
-         <div className="bg-base-200 w-full">
+         <div id="compare" className="bg-base-200 w-full">
             <div className="max-w-6xl mx-auto pt-10 md:py-24 px-4 flex flex-col">
                <div className="text-center flex flex-col items-center">
                   <h1 className="text-primary/10 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
@@ -401,7 +401,7 @@ const Home: NextPage = () => {
             </div>
          </div>
 
-         <div className="bg-primary w-full">
+         <div id="contato" className="bg-primary w-full">
             <div className="max-w-6xl mx-auto px-4 w-full flex flex-col py-16">
                <div className="flex flex-col md:flex-row items-center justify-between">
                   <div className="flex justify-start max-w-lg">
@@ -422,7 +422,7 @@ const Home: NextPage = () => {
                </div>
             </div>
          </div>
-         <div className="bg-base-100 w-full">
+         <div id="depoimentos" className="bg-base-100 w-full">
             <div className="max-w-6xl mx-auto px-4 w-full pt-16 pb-10">
                <div className="text-center flex flex-col items-center">
                   <h1 className="text-primary/10 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
