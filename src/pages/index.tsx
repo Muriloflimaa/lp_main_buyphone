@@ -310,7 +310,7 @@ const Home: NextPage = () => {
                      ENTENDA nossos diferencias e faça a sua melhor escolha
                   </h2>
                </div>
-               <div className="grid grid-cols-4 gap-8 mt-24">
+               <div className="grid grids-cols-1 md:grid-cols-4 gap-8 py-24 md:p-0">
                   <div className="card bg-base-100 shadow-xl p-5">
                      <figure>
                         <Image src={ShildPng} quality={100} alt="ShildPng" />
@@ -364,10 +364,10 @@ const Home: NextPage = () => {
          </div>
 
          <div className="bg-primary w-full">
-            <div className="max-w-7xl mx-auto w-full flex flex-col py-16">
-               <div className="flex items-center justify-between">
+            <div className="max-w-7xl mx-auto px-4 w-full flex flex-col py-16">
+               <div className="flex flex-col md:flex-row items-center justify-between">
                   <div className="flex justify-start max-w-lg">
-                     <div className="flex flex-col gap-4">
+                     <div className="flex flex-col items-center text-center md:text-start md:items-start gap-4">
                         <h1 className="text-3xl text-base-100">
                            Compre pelo Whatsapp
                            <br /> Tire suas duvidas juntamente com o nosso
@@ -378,14 +378,14 @@ const Home: NextPage = () => {
                         </button>
                      </div>
                   </div>
-                  <div className="flex justify-end -mt-32">
+                  <div className="flex w-64 mt-10 justify-end md:-mt-32">
                      <Image src={WhatsappImg} quality={100} alt="WhatsappImg" />
                   </div>
                </div>
             </div>
          </div>
          <div className="bg-base-100 w-full">
-            <div className="max-w-7xl mx-auto w-full pt-16 pb-10">
+            <div className="max-w-7xl mx-auto px-4 w-full pt-16 pb-10">
                <div className="text-center flex flex-col items-center">
                   <h1 className="text-primary/20 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
                      Depoimentos
@@ -456,7 +456,7 @@ const Home: NextPage = () => {
             </div>
          </div>
          <div className="bg-primary w-full">
-            <div className="max-w-7xl mx-auto flex flex-col pt-24 relative">
+            <div className="max-w-7xl mx-auto flex flex-col px-4 pt-24 relative">
                <div className="text-center flex flex-col items-center">
                   <h1 className="text-base-100/20 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
                      Dúvidas frequentes
