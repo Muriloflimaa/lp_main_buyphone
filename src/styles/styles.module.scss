@@ -1,0 +1,37 @@
+.object1 {
+   -webkit-animation: action 1s infinite alternate;
+   animation: action 2s infinite alternate;
+}
+
+.object2 {
+   -webkit-animation: action 1s infinite alternate;
+   animation: action 2.5s infinite alternate;
+}
+
+.object3 {
+   -webkit-animation: action 1s infinite alternate;
+   animation: action 2s infinite alternate;
+}
+
+.object4 {
+   -webkit-animation: action 1s infinite alternate;
+   animation: action 4s infinite alternate;
+}
+
+@-webkit-keyframes action {
+   0% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-30px);
+   }
+}
+
+@keyframes action {
+   0% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-30px);
+   }
+}

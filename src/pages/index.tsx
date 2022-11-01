@@ -30,6 +30,7 @@ import { CardDepoiments } from '../components/CardDepoiment'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import AnaImg from '../assets/images/anabrisa.jpg'
 import AccordionComponent from '../components/AccordionComponent'
+import styles from '../styles/styles.module.scss'
 
 const Home: NextPage = () => {
    return (
@@ -64,25 +65,60 @@ const Home: NextPage = () => {
                               alt="Imagem de Dinheiro"
                            />
                         </div>
-                        <div className="w-40 h-auto absolute -top-20 right-4">
+                        <div
+                           className={
+                              'w-40 h-auto absolute -top-20 right-4 ' +
+                              styles.object2
+                           }
+                        >
                            <Image
                               src={HeartLikeIg}
                               quality={100}
                               alt="Coração Instagram"
                            />
                         </div>
-                        <div className="w-20 h-auto absolute left-0 lg:ml-[24%] bottom-0 mb-[40%] ">
+                        <div
+                           className={
+                              'w-20 h-auto absolute left-0 lg:ml-[24%] bottom-0 mb-[40%] ' +
+                              styles.object1
+                           }
+                        >
                            <Image
                               src={HeartLikeIg}
                               quality={100}
                               alt="Coração Instagram"
                            />
                         </div>
-                        <div className="w-8 h-8 bg-[#EB0045] rounded-[100%] shadow-md shadow-black/30 absolute left-0 lg:ml-[30%] ml-[20%] bottom-0 mb-[30%]" />
-                        <div className="w-12 h-12 bg-[#EB0045] rounded-[100%] shadow-md shadow-black/30 absolute right-12 bottom-0 top-0 mt-[30%]" />
-                        <div className="w-28 h-28 bg-[#EB0045] rounded-[100%] shadow-md shadow-black/30 absolute left-10 bottom-0 top-0" />
-                        <div className="w-20 h-20 bg-base-100/10 rounded-[100%] shadow-md shadow-black/30 absolute -left-10 bottom-0 top-0 mt-[50%]" />
-                        <div className="w-20 h-20 md:w-32 md:h-32 bg-base-100/10 rounded-[100%] shadow-md shadow-black/30 absolute -right-3 lg:-right-16 bottom-10" />
+                        <div
+                           className={
+                              'w-8 h-8 bg-[#EB0045] rounded-[100%] shadow-md shadow-black/30 absolute left-0 lg:ml-[30%] ml-[20%] bottom-0 mb-[30%] ' +
+                              styles.object1
+                           }
+                        />
+                        <div
+                           className={
+                              'w-12 h-12 bg-[#EB0045] rounded-[100%] shadow-md shadow-black/30 absolute right-12 bottom-0 top-0 mt-[30%] ' +
+                              styles.object2
+                           }
+                        />
+                        <div
+                           className={
+                              'w-28 h-28 bg-[#EB0045] rounded-[100%] shadow-md shadow-black/30 absolute left-10 bottom-0 top-0 ' +
+                              styles.object1
+                           }
+                        />
+                        <div
+                           className={
+                              'w-20 h-20 bg-base-100/10 rounded-[100%] shadow-md shadow-black/30 absolute -left-10 bottom-0 top-0 mt-[50%] ' +
+                              styles.object3
+                           }
+                        />
+                        <div
+                           className={
+                              'w-20 h-20 md:w-32 md:h-32 bg-base-100/10 rounded-[100%] shadow-md shadow-black/30 absolute -right-3 lg:-right-16 bottom-10 ' +
+                              styles.object4
+                           }
+                        />
                      </div>
                   </div>
                </div>
