@@ -4,18 +4,23 @@
 }
 
 .object2 {
-   -webkit-animation: action 1s infinite alternate;
+   -webkit-animation: action 2s infinite alternate;
    animation: action 2.5s infinite alternate;
 }
 
 .object3 {
-   -webkit-animation: action 1s infinite alternate;
+   -webkit-animation: action 1.2s infinite alternate;
    animation: action 2s infinite alternate;
 }
 
 .object4 {
-   -webkit-animation: action 1s infinite alternate;
+   -webkit-animation: action 1.8s infinite alternate;
    animation: action 4s infinite alternate;
+}
+
+.object5 {
+   -webkit-animation: action 12s infinite alternate;
+   animation: action 1.4s infinite alternate;
 }
 
 @-webkit-keyframes action {
