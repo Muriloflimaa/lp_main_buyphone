@@ -24,6 +24,12 @@ import Juninho3Post from '../assets/images/juninho3post.png'
 import Girl2BuyPhone from '../assets/images/girl2.png'
 import Juninho2AirPlane from '../assets/images/juninho2airplane.png'
 import ShildPng from '../assets/images/shield.png'
+import WhatsappImg from '../assets/images/whatsapp.png'
+import { Carousel } from 'react-responsive-carousel'
+import { CardDepoiments } from '../components/CardDepoiment'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import AnaImg from '../assets/images/anabrisa.jpg'
+import AccordionComponent from '../components/AccordionComponent'
 
 const Home: NextPage = () => {
    return (
@@ -126,7 +132,7 @@ const Home: NextPage = () => {
                </div>
             </div>
          </div>
-         <div className="bg-primary relative">
+         <div className="bg-primary relative py-4">
             <div className="max-w-7xl mx-auto flex flex-col items-center relative pt-10 md:pt-20 px-4">
                <div className="text-center flex flex-col items-center">
                   <h1 className="text-base-100/20 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
@@ -156,7 +162,11 @@ const Home: NextPage = () => {
                         <Image src={Arrow2} alt="Arrow2" />
                      </div>
 
-                     <Image src={JuninhoBuyPhone} alt="JuninhoBuyPhone" />
+                     <Image
+                        src={JuninhoBuyPhone}
+                        quality={100}
+                        alt="JuninhoBuyPhone"
+                     />
 
                      <div className="flex flex-col">
                         <h1 className="font-semibold text-xl">•Pedido</h1>
@@ -167,17 +177,21 @@ const Home: NextPage = () => {
                   </div>
                </div>
 
-               <div className="flex flex-col md:flex-row justify-around w-full relative md:mt-14 z-10 text-base-100">
+               <div className="flex flex-col md:flex-row justify-end w-full relative md:mt-14 z-10 text-base-100">
                   <div className="md:absolute flex w-full justify-center md:justify-end md:-top-10 md:-left-36">
                      <Image src={Arrow2} alt="Arrow 2" />
                   </div>
-                  <div className="absolute hidden md:flex w-full justify-center bottom-16 mb-12 right-24">
+                  <div className="absolute hidden md:flex w-full justify-center bottom-16 mb-4 right-40">
                      <Image src={Arrow3} alt="Arrow3" />
                   </div>
-                  <div className="flex flex-col items-center md:pt-36 text-primary ml-14">
-                     <Image src={Juninho2CartPhone} alt="Juninho2CartPhone" />
+                  <div className="flex flex-col md:absolute md:left-0 items-center md:pt-48 text-primary">
+                     <Image
+                        src={Juninho2CartPhone}
+                        quality={100}
+                        alt="Juninho2CartPhone"
+                     />
 
-                     <div className="flex flex-col text-primary">
+                     <div className="flex flex-col text-base-100 md:text-primary">
                         <h1 className="font-semibold text-xl">•Pedido</h1>
                         <h2>
                            O cliente realiza o pedido do produto em nosso site.
@@ -185,7 +199,7 @@ const Home: NextPage = () => {
                      </div>
                   </div>
 
-                  <div className="flex flex-col items-center max-w-md mx-auto text-base-100 md:pt-8 md:pl-10">
+                  <div className="flex flex-col items-center max-w-md mx-auto md:mx-0 text-base-100 md:pt-8 md:mr-48">
                      <div className="flex w-full justify-center md:hidden">
                         <Image src={Arrow2} alt="Arrow2" />
                      </div>
@@ -209,17 +223,25 @@ const Home: NextPage = () => {
                </div>
             </div>
          </div>
-         <div className="bg-base-100 w-full h-auto -mt-32">
+         <div className="bg-base-100 w-full h-auto md:-mt-24 pb-4">
             <div className="max-w-7xl mx-auto w-full flex flex-col relative px-4">
-               <div className="hidden md:flex w-full absolute justify-start -ml-10 mt-16">
+               <div className="hidden md:flex w-full absolute justify-start -ml-10 mt-36">
                   <Image src={Arrow4} alt="Arrow3" />
                </div>
                <div className="hidden md:flex w-full absolute justify-center -ml-28 mt-[25%]">
                   <Image src={Arrow5} alt="Arrow3" />
                </div>
-               <div className="flex flex-col md:flex-row items-center mt-16 justify-around">
+
+               <div className="flex flex-col md:flex-row items-center md:mt-16 justify-around">
+                  <div className="flex w-full justify-center md:hidden">
+                     <Image src={Arrow2} alt="Arrow2" />
+                  </div>
                   <div className="flex flex-col md:ml-10 md:items-start items-center max-w-md mx-auto text-primary">
-                     <Image src={Juninho3Post} alt="Juninho2CartPhone" />
+                     <Image
+                        src={Juninho3Post}
+                        quality={100}
+                        alt="Juninho2CartPhone"
+                     />
 
                      <div className="flex flex-col">
                         <h1 className="font-semibold text-xl">•Logística</h1>
@@ -232,9 +254,16 @@ const Home: NextPage = () => {
                   <div className="hidden md:flex justify-center w-full absolute bottom-28 mr-24">
                      <Image src={Arrow6} alt="Arrow3" />
                   </div>
+                  <div className="flex w-full justify-center md:hidden">
+                     <Image src={Arrow2} alt="Arrow2" />
+                  </div>
                   <div className="flex flex-col gap-8">
                      <div className="flex flex-col md:items-start items-center max-w-md mx-auto text-primary">
-                        <Image src={Girl2BuyPhone} alt="Girl2BuyPhone" />
+                        <Image
+                           src={Girl2BuyPhone}
+                           quality={100}
+                           alt="Girl2BuyPhone"
+                        />
 
                         <div className="flex flex-col">
                            <h1 className="font-semibold text-xl">
@@ -246,8 +275,16 @@ const Home: NextPage = () => {
                            </h2>
                         </div>
                      </div>
+
                      <div className="flex flex-col md:items-start items-center max-w-md mx-auto text-primary">
-                        <Image src={Juninho2AirPlane} alt="Juninho2AirPlane" />
+                        <div className="flex w-full justify-center md:hidden">
+                           <Image src={Arrow2} alt="Arrow2" />
+                        </div>
+                        <Image
+                           src={Juninho2AirPlane}
+                           quality={100}
+                           alt="Juninho2AirPlane"
+                        />
 
                         <div className="flex flex-col">
                            <h1 className="font-semibold text-xl">
@@ -263,29 +300,199 @@ const Home: NextPage = () => {
                </div>
             </div>
          </div>
-         <div className="bg-base-200 w-full mt-52">
-            <div className="max-w-7xl mx-auto pt-10 md:pt-20 px-4 flex flex-col">
+         <div className="bg-base-200 w-full">
+            <div className="max-w-7xl mx-auto pt-10 md:py-24 px-4 flex flex-col">
                <div className="text-center flex flex-col items-center">
                   <h1 className="text-primary/20 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
                      COMPARE
                   </h1>
-                  <h2 className="text-primary md:w-2/3 uppercase tracking-widest text-xl font-semibold md:mt-6">
-                     ENTENDA nossos dieferencias e faça a sua melhor escolha
+                  <h2 className="text-primary md:w-1/3 uppercase tracking-widest text-xl font-semibold md:mt-6">
+                     ENTENDA nossos diferencias e faça a sua melhor escolha
                   </h2>
                </div>
-
-               <div className="card w-72 bg-base-100 shadow-xl p-5">
-                  <figure>
-                     <Image src={ShildPng} quality={100} alt="ShildPng" />
-                  </figure>
-                  <div className="card-body">
-                     <h2 className="card-title">Segurança</h2>
-                     <p>
-                        Garantimos a segurança nas transações entre usuários e
-                        privacidade de dados entre todos os envolvidos.
-                     </p>
+               <div className="grid grid-cols-4 gap-8 mt-24">
+                  <div className="card bg-base-100 shadow-xl p-5">
+                     <figure>
+                        <Image src={ShildPng} quality={100} alt="ShildPng" />
+                     </figure>
+                     <div className="card-body">
+                        <h2 className="card-title">Segurança</h2>
+                        <p>
+                           Garantimos a segurança nas transações entre usuários
+                           e privacidade de dados entre todos os envolvidos.
+                        </p>
+                     </div>
+                  </div>
+                  <div className="card bg-base-100 shadow-xl p-5">
+                     <figure>
+                        <Image src={ShildPng} quality={100} alt="ShildPng" />
+                     </figure>
+                     <div className="card-body">
+                        <h2 className="card-title">Segurança</h2>
+                        <p>
+                           Garantimos a segurança nas transações entre usuários
+                           e privacidade de dados entre todos os envolvidos.
+                        </p>
+                     </div>
+                  </div>
+                  <div className="card bg-base-100 shadow-xl p-5">
+                     <figure>
+                        <Image src={ShildPng} quality={100} alt="ShildPng" />
+                     </figure>
+                     <div className="card-body">
+                        <h2 className="card-title">Segurança</h2>
+                        <p>
+                           Garantimos a segurança nas transações entre usuários
+                           e privacidade de dados entre todos os envolvidos.
+                        </p>
+                     </div>
+                  </div>
+                  <div className="card bg-base-100 shadow-xl p-5">
+                     <figure>
+                        <Image src={ShildPng} quality={100} alt="ShildPng" />
+                     </figure>
+                     <div className="card-body">
+                        <h2 className="card-title">Segurança</h2>
+                        <p>
+                           Garantimos a segurança nas transações entre usuários
+                           e privacidade de dados entre todos os envolvidos.
+                        </p>
+                     </div>
                   </div>
                </div>
+            </div>
+         </div>
+
+         <div className="bg-primary w-full">
+            <div className="max-w-7xl mx-auto w-full flex flex-col py-16">
+               <div className="flex items-center justify-between">
+                  <div className="flex justify-start max-w-lg">
+                     <div className="flex flex-col gap-4">
+                        <h1 className="text-3xl text-base-100">
+                           Compre pelo Whatsapp
+                           <br /> Tire suas duvidas juntamente com o nosso
+                           consultor.
+                        </h1>
+                        <button className="btn btn-success text-base-100 w-60">
+                           Clique aqui
+                        </button>
+                     </div>
+                  </div>
+                  <div className="flex justify-end -mt-32">
+                     <Image src={WhatsappImg} quality={100} alt="WhatsappImg" />
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div className="bg-base-100 w-full">
+            <div className="max-w-7xl mx-auto w-full pt-16 pb-10">
+               <div className="text-center flex flex-col items-center">
+                  <h1 className="text-primary/20 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
+                     Depoimentos
+                  </h1>
+                  <h2 className="text-primary uppercase tracking-widest text-xl font-semibold md:mt-6">
+                     de alguns de nossos clientes
+                  </h2>
+               </div>
+               <Carousel
+                  infiniteLoop
+                  autoPlay
+                  interval={5000}
+                  showIndicators={false}
+                  swipeable={false}
+                  showStatus={false}
+                  showThumbs={false}
+                  className="max-w-7xl mx-auto"
+                  renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                     hasPrev && (
+                        <button
+                           type="button"
+                           onClick={onClickHandler}
+                           title={label}
+                           className="btn btn-circle border-transparent text-black bg-base-100 shadow-md shadow-black/40 absolute z-10 top-[40%] left-4"
+                        >
+                           ❮
+                        </button>
+                     )
+                  }
+                  renderArrowNext={(onClickHandler, hasNext, label) =>
+                     hasNext && (
+                        <button
+                           type="button"
+                           onClick={onClickHandler}
+                           title={label}
+                           className="btn btn-circle border-transparent text-black bg-base-100 shadow-md shadow-black/40 absolute z-10 top-[40%] right-4"
+                        >
+                           ❯
+                        </button>
+                     )
+                  }
+               >
+                  <CardDepoiments
+                     name="Anna Brisa"
+                     instagram="www.instagram.com/annabrisaa"
+                     linkVideo="https://www.youtube.com/embed/pMftaexP7RY?autoplay=0&controls=0&showinfo=0&playlist=pMftaexP7RY"
+                     image={AnaImg}
+                     profissional="Digital influencer"
+                     depoiment="Foi uma experiência muito boa de compra!"
+                  />
+                  <CardDepoiments
+                     name="Brendha Crizel"
+                     instagram="www.instagram.com/brendhacrizel/"
+                     linkVideo="https://www.youtube.com/embed/VswfBYbeWFU?autoplay=0&controls=0&showinfo=0&playlist=VswfBYbeWFU"
+                     image={AnaImg}
+                     profissional="Criador(a) de conteúdo digital"
+                     depoiment="A BuyPhone tem o melhor preço do mercado e você pode escolher como quer pagar"
+                  />
+                  <CardDepoiments
+                     name="Bárbara Brunca"
+                     instagram="www.instagram.com/barbarabrunca/"
+                     linkVideo="https://www.youtube.com/embed/OhEwSZSrRUY?autoplay=0&controls=0&showinfo=0&playlist=OhEwSZSrRUY"
+                     image={AnaImg}
+                     profissional="Criador(a) de conteúdo digital"
+                     depoiment="É uma nova forma muito legal, de comprar produtos da apple!"
+                  />
+               </Carousel>
+            </div>
+         </div>
+         <div className="bg-primary w-full">
+            <div className="max-w-7xl mx-auto flex flex-col pt-24 relative">
+               <div className="text-center flex flex-col items-center">
+                  <h1 className="text-base-100/20 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
+                     Dúvidas frequentes
+                  </h1>
+                  <h2 className="text-base-100 uppercase tracking-widest text-xl font-semibold md:mt-6">
+                     Dúvidas frequentes
+                  </h2>
+               </div>
+               <div className="w-32 h-auto absolute -left-24 top-10 hidden md:block ">
+                  <div className="w-32 h-32 -rotate-[40deg] border-[5px] border-base-100 rounded-3xl absolute ml-14 mt-2 "></div>
+                  <div className="w-32 h-32 -rotate-[40deg] border-[5px] border-base-100 rounded-3xl"></div>
+               </div>
+               <AccordionComponent
+                  data={[
+                     {
+                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        paragraph:
+                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+                     },
+                     {
+                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        paragraph:
+                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+                     },
+                     {
+                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        paragraph:
+                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+                     },
+                     {
+                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        paragraph:
+                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+                     },
+                  ]}
+               />
             </div>
          </div>
       </>
