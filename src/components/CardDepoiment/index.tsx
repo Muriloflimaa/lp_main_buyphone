@@ -2,23 +2,11 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { BadgeCheckIcon } from '@heroicons/react/solid'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import styles from './styles.module.scss'
 
-export interface StaticImageData {
-   src: string
-   height: number
-   width: number
-   blurDataURL?: string
-}
-interface StaticRequire {
-   default: StaticImageData
-}
-
-declare type StaticImport = StaticRequire | StaticImageData
-
 interface Props {
-   image: string | StaticImport
+   image: string | StaticImageData
    name: string
    profissional: string
    instagram: string

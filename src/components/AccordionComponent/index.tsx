@@ -20,7 +20,7 @@ const AccordionComponent = ({ data }: AccordionProps) => {
       <Accordion className="bg-base-100/10 my-20" allowZeroExpanded={true}>
          {data.map((res) => {
             return (
-               <AccordionItem>
+               <AccordionItem key={res.paragraph}>
                   <AccordionItemHeading>
                      <AccordionItemButton className="text-base-100 p-4 flex justify-between items-center">
                         {res.title}

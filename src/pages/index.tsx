@@ -1,15 +1,29 @@
+// NEXT AND LIBS
 import type { NextPage } from 'next'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Carousel } from 'react-responsive-carousel'
+import { Divider } from 'react-daisyui'
+
+// COMPONENTS
+import { CardDepoiments } from '../components/CardDepoiment'
+import AccordionComponent from '../components/AccordionComponent'
+import styles from '../styles/styles.module.scss'
+import CardLojas from '../components/CardLojas'
+const NavBar = dynamic(() => import('../components/NavBar'), { ssr: false })
+
+// IMAGES
 import CasasBahiaImg from '../assets/images/CasasBahia.svg'
 import MagazineImg from '../assets/images/Magalu.svg'
 import AmericanasImg from '../assets/images/Americanas.svg'
+import Bublepng from '../assets/images/buble.svg'
+import MacPng from '../assets/images/mac.png'
+import MachineCardPng from '../assets/images/machinecard.svg'
 import PontoFrioImg from '../assets/images/PontoFrio.svg'
 import ExtraImg from '../assets/images/Extra.svg'
-import NavBar from '../components/NavBar'
 import PhoneImg from '../assets/images/phone.png'
-import { Divider } from 'react-daisyui'
 import HeartLikeIg from '../assets/images/HeartLikeIg.png'
-import CardLojas from '../components/CardLojas'
 import GirlBuyPhone from '../assets/images/girlbuyphone.png'
 import Arrow1 from '../assets/images/arrow1.png'
 import Arrow2 from '../assets/images/arrow2.png'
@@ -25,19 +39,15 @@ import Girl2BuyPhone from '../assets/images/girl2.png'
 import Juninho2AirPlane from '../assets/images/juninho2airplane.png'
 import ShildPng from '../assets/images/shield.png'
 import WhatsappImg from '../assets/images/whatsapp.png'
-import { Carousel } from 'react-responsive-carousel'
-import { CardDepoiments } from '../components/CardDepoiment'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import AnaImg from '../assets/images/anabrisa.jpg'
-import AccordionComponent from '../components/AccordionComponent'
-import styles from '../styles/styles.module.scss'
+import CardCompare from '../components/CardCompare'
 
 const Home: NextPage = () => {
    return (
       <>
          <NavBar />
          <div className="bg-primary">
-            <div className="w-full pt-32 mx-auto max-w-6xl px-4">
+            <div className="w-full pt-36 mx-auto max-w-6xl px-4">
                <div className="w-full flex flex-col-reverse md:flex-row justify-between">
                   <div className="flex flex-col text-base-100 ">
                      <div className="text-center md:text-start">
@@ -49,8 +59,8 @@ const Home: NextPage = () => {
                            <br /> MUITO MAIS BARATO!
                         </h2>
                      </div>
-                     <Divider className="bg-base-100/20 divider h-[1px]" />
-                     <span className="font-normal lg:text-xl text-center lg:text-start">
+                     <Divider className="bg-base-100/20 divider h-[1px] text-center md:text-start" />
+                     <span className="font-normal lg:text-xl text-center md:text-start">
                         Conosco, você encontra toda linha de iPhones, com o
                         melhor preço do mercado, 100% nacionais fornecido pelas
                         maiores lojas do Brasil!
@@ -116,33 +126,31 @@ const Home: NextPage = () => {
                         />
                         <div
                            className={
-                              'w-20 h-20 md:w-32  md:h-32 bg-base-100/10 rounded-[100%] shadow-md shadow-black/30 absolute -right-3 lg:-right-16 bottom-10 ' +
+                              'w-20 h-20 md:w-32  md:h-32 bg-base-100/10 rounded-[100%] shadow-md shadow-black/30 absolute -right-3 lg:-right-8 bottom-10 ' +
                               styles.object4
                            }
                         />
                      </div>
                   </div>
                </div>
-            </div>
-
-            <div className="mx-auto py-14 max-w-6xl relative">
-               <div className="w-24 h-[200px] blur-md bg-primary -left-8 absolute top-0 z-50" />
-               <div className="w-24 h-[200px] blur-md bg-primary -right-8 absolute top-0 z-50" />
-               <div className={styles.container}>
-                  <div className={styles.photobanner}>
-                     <CardLojas image={CasasBahiaImg} width={150} />
-                     <CardLojas image={MagazineImg} width={120} />
-                     <CardLojas image={AmericanasImg} width={150} />
-                     <CardLojas image={PontoFrioImg} width={150} />
-                     <CardLojas image={ExtraImg} width={120} />
-                     <CardLojas image={CasasBahiaImg} width={150} />
-                     <CardLojas image={MagazineImg} width={120} />
-                     <CardLojas image={AmericanasImg} width={150} />
-                     <CardLojas image={PontoFrioImg} width={150} />
-                     <CardLojas image={ExtraImg} width={120} />
+               <div className="py-14 relative md:mx-4">
+                  <div className="w-24 h-[200px] blur-md bg-primary -left-8 absolute top-0 z-10" />
+                  <div className="w-24 h-[200px] blur-md bg-primary -right-4 md:-right-8 absolute top-0 z-10" />
+                  <div className={styles.container}>
+                     <div className={styles.photobanner}>
+                        <CardLojas image={CasasBahiaImg} width={150} />
+                        <CardLojas image={MagazineImg} width={120} />
+                        <CardLojas image={AmericanasImg} width={150} />
+                        <CardLojas image={PontoFrioImg} width={150} />
+                        <CardLojas image={ExtraImg} width={120} />
+                        <CardLojas image={CasasBahiaImg} width={150} />
+                        <CardLojas image={MagazineImg} width={120} />
+                        <CardLojas image={AmericanasImg} width={150} />
+                        <CardLojas image={PontoFrioImg} width={150} />
+                        <CardLojas image={ExtraImg} width={120} />
+                     </div>
                   </div>
                </div>
-               <div className={styles.divisorbuyphone}></div>
             </div>
          </div>
          <div className="bg-base-200">
@@ -363,54 +371,32 @@ const Home: NextPage = () => {
                   </h2>
                </div>
                <div className="grid grids-cols-1 md:grid-cols-4 gap-8 py-24 md:p-0 md:pt-12">
-                  <div className="card bg-base-100 shadow-xl p-5">
-                     <figure>
-                        <Image src={ShildPng} quality={100} alt="ShildPng" />
-                     </figure>
-                     <div className="card-body">
-                        <h2 className="card-title">Segurança</h2>
-                        <p>
-                           Garantimos a segurança nas transações entre usuários
-                           e privacidade de dados entre todos os envolvidos.
-                        </p>
-                     </div>
-                  </div>
-                  <div className="card bg-base-100 shadow-xl p-5">
-                     <figure>
-                        <Image src={ShildPng} quality={100} alt="ShildPng" />
-                     </figure>
-                     <div className="card-body">
-                        <h2 className="card-title">Segurança</h2>
-                        <p>
-                           Garantimos a segurança nas transações entre usuários
-                           e privacidade de dados entre todos os envolvidos.
-                        </p>
-                     </div>
-                  </div>
-                  <div className="card bg-base-100 shadow-xl p-5">
-                     <figure>
-                        <Image src={ShildPng} quality={100} alt="ShildPng" />
-                     </figure>
-                     <div className="card-body">
-                        <h2 className="card-title">Segurança</h2>
-                        <p>
-                           Garantimos a segurança nas transações entre usuários
-                           e privacidade de dados entre todos os envolvidos.
-                        </p>
-                     </div>
-                  </div>
-                  <div className="card bg-base-100 shadow-xl p-5">
-                     <figure>
-                        <Image src={ShildPng} quality={100} alt="ShildPng" />
-                     </figure>
-                     <div className="card-body">
-                        <h2 className="card-title">Segurança</h2>
-                        <p>
-                           Garantimos a segurança nas transações entre usuários
-                           e privacidade de dados entre todos os envolvidos.
-                        </p>
-                     </div>
-                  </div>
+                  <CardCompare
+                     image={ShildPng}
+                     title="Segurança"
+                     paragraph="Garantimos a segurança nas transações entre usuários
+                           e privacidade de dados entre todos os envolvidos."
+                  />
+                  <CardCompare
+                     image={MacPng}
+                     title="Facilidade"
+                     paragraph=" Nossa forma de comprar é inovadora e com o
+                     diferencial de condições de pagamentos
+                     personalizadas."
+                  />
+                  <CardCompare
+                     image={MachineCardPng}
+                     title="Melhor preço"
+                     paragraph="O melhor de tudo isso, é que conseguimos SEMPRE
+                     cobrir os preços das principais lojas do Brasil."
+                  />
+                  <CardCompare
+                     image={Bublepng}
+                     title="Suporte"
+                     paragraph=" Oferecemos suporte acessível com atendimento
+                     humanizado através dos canais de comunicação mais
+                     utilizados."
+                  />
                </div>
             </div>
          </div>
@@ -425,7 +411,7 @@ const Home: NextPage = () => {
                            <br /> Tire suas duvidas juntamente com o nosso
                            consultor.
                         </h1>
-                        <button className="btn btn-success text-base-100 w-60">
+                        <button className="btn btn-success border-none rounded-3xl bg-[#02900F] text-base-100 w-44">
                            Clique aqui
                         </button>
                      </div>
@@ -546,6 +532,34 @@ const Home: NextPage = () => {
                   ]}
                />
             </div>
+         </div>
+         <div className="bg-base-100">
+            <footer className="footer p-10 text-primary max-w-6xl mx-auto">
+               <div>
+                  <span className="footer-title">Mais informações</span>
+                  <a className="link link-hover">Política de privacidade</a>
+                  <a className="link link-hover">Termos e condições</a>
+               </div>
+               <div>
+                  <span className="footer-title">Contatos</span>
+                  <a className="link link-hover">contatobuyphone</a>
+                  <a className="link link-hover">BuyPhone</a>
+                  <a className="link link-hover">buyphone.match</a>
+                  <a className="link link-hover">(18) 98136-7275</a>
+               </div>
+               <div>
+                  <p>
+                     Copyright BuyPhone - 2022. Todos os direitos reservados.
+                  </p>
+                  <p>CNPJ: 45.679.637/0001-94</p>
+                  <p>Araçatuba - SP, 16.018-000, Brasil</p>
+               </div>
+               <div className="flex flex-col h-full justify-end">
+                  <span className="footer-title">
+                     Criado com ❤️ por Buyphone.com.br
+                  </span>
+               </div>
+            </footer>
          </div>
       </>
    )
