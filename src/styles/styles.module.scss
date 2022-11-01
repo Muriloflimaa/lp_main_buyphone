@@ -40,3 +40,36 @@
       transform: translateY(-30px);
    }
 }
+
+.container {
+   height: 100px;
+   position: relative;
+   overflow: hidden;
+}
+
+.photobanner {
+   position: absolute;
+   width: 190%;
+   top: 0px;
+   left: 0px;
+   height: 100px;
+   overflow: hidden;
+   display: flex;
+   gap: 1rem;
+   white-space: nowrap;
+   background-image: url('../assets/images/marktcomponent.png') repeat-x;
+   animation: bannermove 30s linear infinite;
+
+   &:hover {
+      animation-play-state: paused;
+   }
+}
+
+@keyframes bannermove {
+   0% {
+      transform: translate(0, 0);
+   }
+   100% {
+      transform: translate(-50%, 0);
+   }
+}

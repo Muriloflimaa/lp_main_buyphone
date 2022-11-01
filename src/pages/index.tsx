@@ -37,19 +37,20 @@ const Home: NextPage = () => {
       <>
          <NavBar />
          <div className="bg-primary">
-            <div className="w-full pt-32 pb-20 mx-auto max-w-6xl px-4">
+            <div className="w-full pt-32 mx-auto max-w-6xl px-4">
                <div className="w-full flex flex-col-reverse md:flex-row justify-between">
                   <div className="flex flex-col text-base-100 ">
                      <div className="text-center md:text-start">
-                        <h1 className="text-base-100/20 uppercase text-5xl lg:text-8xl font-bold lg:absolute lg:leading-3">
+                        <h1 className="text-base-100/10 uppercase text-5xl lg:text-8xl font-bold lg:absolute lg:leading-3">
                            pague menos
                         </h1>
-                        <h2 className="uppercase tracking-widest text-xl font-semibold lg:mt-6 ">
-                           VEJA COMO COMPRAR IPHONES PAGANDO MUITO MAIS BARATO!
+                        <h2 className="uppercase tracking-widest text-xl font-bold lg:mt-6 ">
+                           VEJA COMO COMPRAR IPHONES PAGANDO
+                           <br /> MUITO MAIS BARATO!
                         </h2>
                      </div>
                      <Divider className="bg-base-100/20 divider h-[1px]" />
-                     <span className="font-normal lg:text-2xl text-center lg:text-start">
+                     <span className="font-normal lg:text-xl text-center lg:text-start">
                         Conosco, você encontra toda linha de iPhones, com o
                         melhor preço do mercado, 100% nacionais fornecido pelas
                         maiores lojas do Brasil!
@@ -115,30 +116,42 @@ const Home: NextPage = () => {
                         />
                         <div
                            className={
-                              'w-20 h-20 md:w-32 md:h-32 bg-base-100/10 rounded-[100%] shadow-md shadow-black/30 absolute -right-3 lg:-right-16 bottom-10 ' +
+                              'w-20 h-20 md:w-32  md:h-32 bg-base-100/10 rounded-[100%] shadow-md shadow-black/30 absolute -right-3 lg:-right-16 bottom-10 ' +
                               styles.object4
                            }
                         />
                      </div>
                   </div>
                </div>
+            </div>
 
-               <div className="mx-auto pt-14 flex flex-col gap-4 items-center justify-between lg:flex-row lg:gap-0">
-                  <CardLojas image={CasasBahiaImg} width={150} />
-                  <CardLojas image={MagazineImg} width={120} />
-                  <CardLojas image={AmericanasImg} width={150} />
-                  <CardLojas image={PontoFrioImg} width={150} />
-                  <CardLojas image={ExtraImg} width={120} />
+            <div className="mx-auto py-14 max-w-6xl relative">
+               <div className="w-24 h-[200px] blur-md bg-primary -left-8 absolute top-0 z-50" />
+               <div className="w-24 h-[200px] blur-md bg-primary -right-8 absolute top-0 z-50" />
+               <div className={styles.container}>
+                  <div className={styles.photobanner}>
+                     <CardLojas image={CasasBahiaImg} width={150} />
+                     <CardLojas image={MagazineImg} width={120} />
+                     <CardLojas image={AmericanasImg} width={150} />
+                     <CardLojas image={PontoFrioImg} width={150} />
+                     <CardLojas image={ExtraImg} width={120} />
+                     <CardLojas image={CasasBahiaImg} width={150} />
+                     <CardLojas image={MagazineImg} width={120} />
+                     <CardLojas image={AmericanasImg} width={150} />
+                     <CardLojas image={PontoFrioImg} width={150} />
+                     <CardLojas image={ExtraImg} width={120} />
+                  </div>
                </div>
+               <div className={styles.divisorbuyphone}></div>
             </div>
          </div>
          <div className="bg-base-200">
             <div className="flex mx-auto max-w-6xl px-4 py-20 flex-col relative">
                <div className="text-center flex flex-col items-center">
-                  <h1 className="text-primary/20 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
+                  <h1 className="text-primary/10 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
                      ENTENDA
                   </h1>
-                  <h2 className="text-primary uppercase tracking-widest text-xl font-semibold md:mt-6">
+                  <h2 className="text-primary uppercase tracking-widest text-xl font-bold md:mt-6">
                      ASSISTA AO VÍDEO E ENTENDA MELHOR!
                   </h2>
                   <div className="bg-primary/20 w-20 h-[5px] rounded-3xl mt-4"></div>
@@ -149,7 +162,7 @@ const Home: NextPage = () => {
                      <div className="w-full h-auto relative flex">
                         <div className="relative w-full h-full pb-[56.25%]">
                            <iframe
-                              className="absolute w-full h-full flex border-none rounded-3xl shadow-black/40 shadow-md m-0"
+                              className="absolute w-full h-full flex border-none shadow-black/40 shadow-md m-0"
                               placeholder="blur"
                               loading="lazy"
                               src="https://www.youtube.com/embed/FrYS9Hj_yEk"
@@ -168,13 +181,13 @@ const Home: NextPage = () => {
                </div>
             </div>
          </div>
-         <div className="bg-primary relative py-4">
+         <div className="bg-primary relative py-4 pb-10">
             <div className="max-w-6xl mx-auto flex flex-col items-center relative pt-10 md:pt-20 px-4">
                <div className="text-center flex flex-col items-center">
-                  <h1 className="text-base-100/20 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
+                  <h1 className="text-base-100/5 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
                      Conheça
                   </h1>
-                  <h2 className="text-base-100 md:w-2/3 uppercase tracking-widest text-xl font-semibold md:mt-6">
+                  <h2 className="text-base-100 md:w-2/3 uppercase tracking-widest text-xl font-bold md:mt-6">
                      TODAS AS ETAPAS DO NOSSO MODELO DE VENDAS INOVADOR
                   </h2>
                </div>
@@ -186,7 +199,7 @@ const Home: NextPage = () => {
                   <div className="flex flex-col items-center">
                      <Image src={GirlBuyPhone} alt="GirlBuyPhone" />
 
-                     <div className="flex flex-col">
+                     <div className="flex flex-col md:w-2/3">
                         <h1 className="font-semibold text-xl">•Pedido</h1>
                         <h2>
                            O cliente realiza o pedido do produto em nosso site.
@@ -204,10 +217,13 @@ const Home: NextPage = () => {
                         alt="JuninhoBuyPhone"
                      />
 
-                     <div className="flex flex-col">
-                        <h1 className="font-semibold text-xl">•Pedido</h1>
+                     <div className="flex flex-col md:w-1/2">
+                        <h1 className="font-semibold text-xl">
+                           •Intermediação
+                        </h1>
                         <h2>
-                           O cliente realiza o pedido do produto em nosso site.
+                           Com a ajuda da tecnologia nós notificamos a venda em
+                           nosso canal de associados.
                         </h2>
                      </div>
                   </div>
@@ -217,10 +233,10 @@ const Home: NextPage = () => {
                   <div className="md:absolute flex w-full justify-center md:justify-end md:-top-10 md:-left-36">
                      <Image src={Arrow2} alt="Arrow 2" />
                   </div>
-                  <div className="absolute hidden md:flex w-full justify-center bottom-16 mb-4 right-40">
+                  <div className="absolute hidden md:flex w-full justify-center bottom-2 right-28">
                      <Image src={Arrow3} alt="Arrow3" />
                   </div>
-                  <div className="flex flex-col md:absolute md:left-0 items-center md:pt-48 text-primary">
+                  <div className="flex flex-col md:absolute md:left-0 items-center md:pt-52 text-primary">
                      <Image
                         src={Juninho2CartPhone}
                         quality={100}
@@ -235,7 +251,7 @@ const Home: NextPage = () => {
                      </div>
                   </div>
 
-                  <div className="flex flex-col items-center max-w-md mx-auto md:mx-0 text-base-100 md:pt-8 md:mr-48">
+                  <div className="flex flex-col items-center max-w-md mx-auto md:mx-0 text-base-100 md:pt-14 md:mr-48">
                      <div className="flex w-full justify-center md:hidden">
                         <Image src={Arrow2} alt="Arrow2" />
                      </div>
@@ -248,7 +264,7 @@ const Home: NextPage = () => {
                         height={300}
                      />
 
-                     <div className="flex flex-col">
+                     <div className="flex flex-col md:w-1/2">
                         <h1 className="font-semibold text-xl">•Match</h1>
                         <h2>
                            Nosso associado reserva o pedido em poucos minutos
@@ -261,7 +277,7 @@ const Home: NextPage = () => {
          </div>
          <div className="bg-base-100 w-full h-auto md:-mt-24 pb-4">
             <div className="max-w-6xl mx-auto w-full flex flex-col relative px-4">
-               <div className="hidden md:flex w-full absolute justify-start -ml-10 mt-36">
+               <div className="hidden md:flex w-full absolute justify-start -ml-10 mt-24 -left-8">
                   <Image src={Arrow4} alt="Arrow3" />
                </div>
                <div className="hidden md:flex w-full absolute justify-center -ml-28 mt-[25%]">
@@ -339,14 +355,14 @@ const Home: NextPage = () => {
          <div className="bg-base-200 w-full">
             <div className="max-w-6xl mx-auto pt-10 md:py-24 px-4 flex flex-col">
                <div className="text-center flex flex-col items-center">
-                  <h1 className="text-primary/20 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
+                  <h1 className="text-primary/10 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
                      COMPARE
                   </h1>
-                  <h2 className="text-primary md:w-1/3 uppercase tracking-widest text-xl font-semibold md:mt-6">
+                  <h2 className="text-primary md:w-1/3 uppercase tracking-widest text-xl font-bold md:mt-6">
                      ENTENDA nossos diferencias e faça a sua melhor escolha
                   </h2>
                </div>
-               <div className="grid grids-cols-1 md:grid-cols-4 gap-8 py-24 md:p-0">
+               <div className="grid grids-cols-1 md:grid-cols-4 gap-8 py-24 md:p-0 md:pt-12">
                   <div className="card bg-base-100 shadow-xl p-5">
                      <figure>
                         <Image src={ShildPng} quality={100} alt="ShildPng" />
@@ -423,10 +439,10 @@ const Home: NextPage = () => {
          <div className="bg-base-100 w-full">
             <div className="max-w-6xl mx-auto px-4 w-full pt-16 pb-10">
                <div className="text-center flex flex-col items-center">
-                  <h1 className="text-primary/20 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
+                  <h1 className="text-primary/10 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
                      Depoimentos
                   </h1>
-                  <h2 className="text-primary uppercase tracking-widest text-xl font-semibold md:mt-6">
+                  <h2 className="text-primary uppercase tracking-widest text-xl font-bold md:mt-6">
                      de alguns de nossos clientes
                   </h2>
                </div>
@@ -494,10 +510,10 @@ const Home: NextPage = () => {
          <div className="bg-primary w-full">
             <div className="max-w-6xl mx-auto flex flex-col px-4 pt-24 relative">
                <div className="text-center flex flex-col items-center">
-                  <h1 className="text-base-100/20 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
+                  <h1 className="text-base-100/5 uppercase text-5xl md:text-7xl font-bold md:absolute md:leading-3">
                      Dúvidas frequentes
                   </h1>
-                  <h2 className="text-base-100 uppercase tracking-widest text-xl font-semibold md:mt-6">
+                  <h2 className="text-base-100 uppercase tracking-widest text-2xl font-bold md:mt-[10px]">
                      Dúvidas frequentes
                   </h2>
                </div>
