@@ -29,7 +29,7 @@ export default function NavBar({ navbar }: navBarProps) {
                         : 'bg-primary text-base-100')
                   }
                >
-                  <div className="max-w-7xl mx-auto w-full px-4">
+                  <div className="max-w-6xl mx-auto w-full px-4">
                      <div className="flex-1">
                         <div
                            className={
