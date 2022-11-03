@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import { Divider } from 'react-daisyui'
+import 'react-accessible-accordion/dist/fancy-example.css'
 
 // COMPONENTS
 import { CardDepoiments } from '../components/CardDepoiment'
@@ -41,8 +42,33 @@ import ShildPng from '../assets/images/shield.png'
 import WhatsappImg from '../assets/images/whatsapp.png'
 import AnaImg from '../assets/images/anabrisa.jpg'
 import CardCompare from '../components/CardCompare'
+import { Accordion } from 'react-accessible-accordion'
+import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
+   const data = [
+      {
+         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+         paragraph:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+      },
+      {
+         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+         paragraph:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+      },
+      {
+         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+         paragraph:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+      },
+      {
+         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+         paragraph:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+      },
+   ]
+
    return (
       <>
          <NavBar />
@@ -507,60 +533,23 @@ const Home: NextPage = () => {
                   <div className="w-32 h-32 -rotate-[40deg] border-[5px] border-base-100 rounded-3xl absolute ml-14 mt-2 "></div>
                   <div className="w-32 h-32 -rotate-[40deg] border-[5px] border-base-100 rounded-3xl"></div>
                </div>
-               <AccordionComponent
-                  data={[
-                     {
-                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                        paragraph:
-                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-                     },
-                     {
-                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                        paragraph:
-                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-                     },
-                     {
-                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                        paragraph:
-                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-                     },
-                     {
-                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                        paragraph:
-                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-                     },
-                  ]}
-               />
+               <Accordion
+                  className="bg-base-100/10 my-20 rounded-md"
+                  allowZeroExpanded={true}
+               >
+                  {data.map((res) => {
+                     return (
+                        <AccordionComponent
+                           key={res.paragraph}
+                           title={res.title}
+                           paragraph={res.paragraph}
+                        />
+                     )
+                  })}
+               </Accordion>
             </div>
          </div>
-         <div className="bg-base-100">
-            <footer className="footer p-10 text-primary max-w-6xl mx-auto">
-               <div>
-                  <span className="footer-title">Mais informações</span>
-                  <a className="link link-hover">Política de privacidade</a>
-                  <a className="link link-hover">Termos e condições</a>
-               </div>
-               <div>
-                  <span className="footer-title">Contatos</span>
-                  <a className="link link-hover">contatobuyphone</a>
-                  <a className="link link-hover">BuyPhone</a>
-                  <a className="link link-hover">buyphone.match</a>
-                  <a className="link link-hover">(18) 98136-7275</a>
-               </div>
-               <div>
-                  <p>
-                     Copyright BuyPhone - 2022. Todos os direitos reservados.
-                  </p>
-                  <p>CNPJ: 45.679.637/0001-94</p>
-                  <p>Araçatuba - SP, 16.018-000, Brasil</p>
-               </div>
-               <div className="flex flex-col h-full justify-end">
-                  <span className="footer-title">
-                     Criado com ❤️ por Buyphone.com.br
-                  </span>
-               </div>
-            </footer>
-         </div>
+         <Footer />
       </>
    )
 }
