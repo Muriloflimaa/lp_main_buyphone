@@ -41,6 +41,9 @@ import Juninho2AirPlane from '../assets/images/juninho2airplane.png'
 import ShildPng from '../assets/images/shield.png'
 import WhatsappImg from '../assets/images/whatsapp.png'
 import AnaImg from '../assets/images/anabrisa.jpg'
+import TikTokPng from '../assets/images/tiktok.png'
+import InstagramPng from '../assets/images/instagram.png'
+import TwitterPng from '../assets/images/twitter.png'
 import CardCompare from '../components/CardCompare'
 import { Accordion } from 'react-accessible-accordion'
 import Footer from '../components/Footer'
@@ -456,6 +459,42 @@ const Home: NextPage = () => {
                      depoiment="É uma nova forma muito legal, de comprar produtos da apple!"
                   />
                </Carousel>
+            </div>
+         </div>
+         <div id="compare" className="bg-base-200 w-full">
+            <div className="max-w-6xl mx-auto pt-10 md:py-24 px-4 flex flex-col">
+               <div className="text-center flex flex-col items-center">
+                  <h1 className="text-primary/10 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
+                     Redes sociais
+                  </h1>
+                  <h2 className="text-primary md:w-1/3 uppercase tracking-widest text-xl font-bold md:mt-6">
+                     Redes sociais
+                  </h2>
+               </div>
+               <div className="grid grids-cols-1 md:grid-cols-4 gap-8 py-24 md:p-0 md:pt-12">
+                  <CardCompare
+                     image={InstagramPng}
+                     title="Instagram"
+                     paragraph="Seu match perfeito!
+                     Compre seu iPhone com o melhor preço do mercado."
+                  />
+                  <CardCompare
+                     image={InstagramPng}
+                     title="LinkedIn"
+                     paragraph="Seu match perfeito!
+                     Compre seu iPhone com o melhor preço do mercado."
+                  />
+                  <CardCompare
+                     image={TwitterPng}
+                     title="Twitter"
+                     paragraph="O melhor de tudo isso, é que conseguimos SEMPRE cobrir os preços das principais lojas do Brasil."
+                  />
+                  <CardCompare
+                     image={TikTokPng}
+                     title="TikTok"
+                     paragraph="Oferecemos suporte acessível com atendimento humanizado através dos canais de comunicação mais utilizados."
+                  />
+               </div>
             </div>
          </div>
 
