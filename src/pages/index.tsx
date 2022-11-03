@@ -1,4 +1,4 @@
-// NEXT AND LIBS
+//***** NEXT AND LIBS *****//
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
@@ -7,8 +7,9 @@ import { Carousel } from 'react-responsive-carousel'
 import { Divider } from 'react-daisyui'
 import 'react-accessible-accordion/dist/fancy-example.css'
 import { Accordion } from 'react-accessible-accordion'
+import React from 'react'
 
-// COMPONENTS
+//***** COMPONENTS *****//
 import CardCompare from '../components/CardCompare'
 import Footer from '../components/Footer'
 import { CardDepoiments } from '../components/CardDepoiment'
@@ -17,41 +18,55 @@ import styles from '../styles/styles.module.scss'
 import CardLojas from '../components/CardLojas'
 const NavBar = dynamic(() => import('../components/NavBar'), { ssr: false })
 
-// IMAGES
+//***** IMAGES *****//
+// lojas
 import CasasBahiaImg from '../assets/images/CasasBahia.svg'
 import MagazineImg from '../assets/images/Magalu.svg'
 import AmericanasImg from '../assets/images/Americanas.svg'
-import Bublepng from '../assets/images/buble.svg'
-import MacPng from '../assets/images/mac.png'
-import MachineCardPng from '../assets/images/machinecard.svg'
 import PontoFrioImg from '../assets/images/PontoFrio.svg'
 import ExtraImg from '../assets/images/Extra.svg'
-import PhoneImg from '../assets/images/phone.png'
-import HeartLikeIg from '../assets/images/HeartLikeIg.png'
-import GirlBuyPhone from '../assets/images/girlbuyphone.png'
+// arrows
 import Arrow1 from '../assets/images/arrow1.png'
 import Arrow2 from '../assets/images/arrow2.png'
 import Arrow3 from '../assets/images/arrow3.png'
 import Arrow4 from '../assets/images/arrow4.png'
 import Arrow5 from '../assets/images/arrow5.png'
 import Arrow6 from '../assets/images/arrow6.png'
+import ArrowWhitePng from '../assets/images/arrowmobilewhite.png'
+import ArrowPurplePng from '../assets/images/arrowmobilepurple.png'
+// persons
 import JuninhoBuyPhone from '../assets/images/juninho.png'
 import Juninho2BuyPhone from '../assets/images/juninho2.png'
 import Juninho2CartPhone from '../assets/images/juninho2cart.png'
 import Juninho3Post from '../assets/images/juninho3post.png'
+import GirlBuyPhone from '../assets/images/girlbuyphone.png'
 import Girl2BuyPhone from '../assets/images/girl2.png'
 import Juninho2AirPlane from '../assets/images/juninho2airplane.png'
-import ShildPng from '../assets/images/shield.png'
+// clients
+import AnaImg from '../assets/images/client_anabrisa.jpg'
+import BarbaraImg from '../assets/images/client_barbara.jpg'
+import BrendaImg from '../assets/images/client_brenda.jpg'
+import CLyviaImg from '../assets/images/client_lyvia.png'
+import CGabrielImg from '../assets/images/client_gabriel.png'
+import CLuizImg from '../assets/images/client_luiz.png'
+import CIgorImg from '../assets/images/client_igor.png'
+import CAmandaImg from '../assets/images/client_amanda.png'
+// sociais
 import WhatsappImg from '../assets/images/whatsapp.png'
-import AnaImg from '../assets/images/anabrisa.jpg'
 import TikTokPng from '../assets/images/tiktok.png'
 import InstagramPng from '../assets/images/instagram.png'
 import TwitterPng from '../assets/images/twitter.png'
 import LinkedinPng from '../assets/images/linkedin.png'
-import ArrowWhitePng from '../assets/images/arrowmobilewhite.png'
-import ArrowPurplePng from '../assets/images/arrowmobilepurple.png'
+// outer
+import Bublepng from '../assets/images/buble.svg'
+import MacPng from '../assets/images/mac.png'
+import MachineCardPng from '../assets/images/machinecard.svg'
+import PhoneImg from '../assets/images/phone.png'
+import HeartLikeIg from '../assets/images/HeartLikeIg.png'
+import ShildPng from '../assets/images/shield.png'
 
 const Home: NextPage = () => {
+   //duvidas frequentes
    const data = [
       {
          title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -76,7 +91,7 @@ const Home: NextPage = () => {
    ]
 
    return (
-      <>
+      <React.Fragment>
          <NavBar />
          <div id="main" className="bg-primary">
             <div className="w-full pt-36 mx-auto max-w-6xl px-4">
@@ -468,7 +483,7 @@ const Home: NextPage = () => {
                      name="Brendha Crizel"
                      instagram="www.instagram.com/brendhacrizel/"
                      linkVideo="https://www.youtube.com/embed/VswfBYbeWFU?autoplay=0&controls=0&showinfo=0&playlist=VswfBYbeWFU"
-                     image={AnaImg}
+                     image={BrendaImg}
                      profissional="Criador(a) de conteúdo digital"
                      depoiment="A BuyPhone tem o melhor preço do mercado e você pode escolher como quer pagar"
                   />
@@ -476,9 +491,57 @@ const Home: NextPage = () => {
                      name="Bárbara Brunca"
                      instagram="www.instagram.com/barbarabrunca/"
                      linkVideo="https://www.youtube.com/embed/OhEwSZSrRUY?autoplay=0&controls=0&showinfo=0&playlist=OhEwSZSrRUY"
-                     image={AnaImg}
+                     image={BarbaraImg}
                      profissional="Criador(a) de conteúdo digital"
                      depoiment="É uma nova forma muito legal, de comprar produtos da apple!"
+                  />
+                  <CardDepoiments
+                     name="Lyvia Nagib Fulanetti"
+                     instagram="www.instagram.com/lyvianagib/"
+                     linkVideo="https://www.youtube.com/embed/Npmw1UcMnxM?autoplay=0&controls=0&showinfo=0&playlist=Npmw1UcMnxM"
+                     image={CLyviaImg}
+                     profissional="Fisioterapeuta"
+                     depoiment="Comprei dois celulares, um pra mim e um pra
+                     minha irmã, dois iPhones 11. O preço é muito
+                     abaixo. Vale muito a pena!"
+                  />
+                  <CardDepoiments
+                     name="Gabriel Martins"
+                     instagram="www.instagram.com/gabrielpessoamartins/"
+                     linkVideo="https://www.youtube.com/embed/w1Sv0QIFxyA?autoplay=0&controls=0&showinfo=0&playlist=w1Sv0QIFxyA"
+                     image={CGabrielImg}
+                     profissional="Empresário"
+                     depoiment="Celular zero, lacrado na caixa! Pesquisei
+                     bastante em vários lugares e o preço deles é bem
+                     abaixo do mercado."
+                  />
+                  <CardDepoiments
+                     name="Luiz Henrique Puertas"
+                     instagram="www.instagram.com/luizpuertas/"
+                     linkVideo="https://www.youtube.com/embed/t3U1o2I9WvI?autoplay=0&controls=0&showinfo=0&playlist=t3U1o2I9WvI"
+                     image={CLuizImg}
+                     profissional="Vendas de sistemas fotovoltaicos"
+                     depoiment="Um preço muito bom, paguei muito barato no
+                     Iphone original lacrado!"
+                  />
+                  <CardDepoiments
+                     name="Igor Fortin"
+                     instagram="www.instagram.com/igorfortin/"
+                     linkVideo="https://www.youtube.com/embed/vH0EjiMyZaQ?autoplay=0&controls=0&showinfo=0&playlist=vH0EjiMyZaQ"
+                     image={CIgorImg}
+                     profissional="Advogado"
+                     depoiment="IPhone 12 que adquiri na BuyPhone, perfeito!
+                     Novo, com ótimas condições de preço e
+                     parcelamento."
+                  />
+                  <CardDepoiments
+                     name="Amanda L. Prado"
+                     instagram="www.instagram.com/_amandalprado/"
+                     linkVideo="https://www.youtube.com/embed/xzX8LJv7VuQ?autoplay=0&controls=0&showinfo=0&playlist=xzX8LJv7VuQ"
+                     image={CAmandaImg}
+                     profissional="🧿"
+                     depoiment="A Amanda adorou o produto que comprou na
+                     BuyPhone."
                   />
                </Carousel>
             </div>
@@ -613,7 +676,7 @@ const Home: NextPage = () => {
             </div>
          </div>
          <Footer />
-      </>
+      </React.Fragment>
    )
 }
 

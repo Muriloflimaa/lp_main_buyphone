@@ -29,7 +29,7 @@ export const CardDepoiments = ({
                <a target={'_blank'} href={`https://${instagram}`}>
                   <div className={styles.effect_border}>
                      <Image
-                        className={'mask mask-circle '}
+                        className={'mask mask-circle'}
                         src={image}
                         alt={name}
                         width={130}

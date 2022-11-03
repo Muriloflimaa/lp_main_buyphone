@@ -5,6 +5,21 @@ export default class MyDocument extends Document {
       return (
          <Html>
             <Head>
+               <meta
+                  name="description"
+                  content="Iphone em promoção que você procura? Na Buy Phone você encontra as melhores ofertas de produtos com entrega rápida e frete grátis!"
+               />
+               <meta
+                  name="keywords"
+                  content="iphone, apple, buyphone, descontos, apple watch, ipad, macbook, imac"
+               ></meta>
+               <meta name="copyright" content="BuyPhone"></meta>
+               <meta
+                  name="subject"
+                  content="Garanta seu iphone novo com um match perfeito!"
+               ></meta>
+               <meta charSet="utf-8" />
+               <link rel="icon" type="image/ico" href="/favicon.ico" />
                <link rel="preconnect" href="https://fonts.googleapis.com" />
                <link rel="preconnect" href="https://fonts.gstatic.com" />
                <link
