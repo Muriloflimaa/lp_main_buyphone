@@ -159,22 +159,22 @@ const Home: NextPage = () => {
                      </div>
                   </div>
                </div>
-               <div className="py-14 relative md:mx-4">
-                  <div className="w-24 h-[200px] blur-md bg-primary -left-8 absolute top-0 z-10" />
-                  <div className="w-24 h-[200px] blur-md bg-primary -right-4 md:-right-8 absolute top-0 z-10" />
-                  <div className={styles.container}>
-                     <div className={styles.photobanner}>
-                        <CardLojas image={CasasBahiaImg} width={150} />
-                        <CardLojas image={MagazineImg} width={120} />
-                        <CardLojas image={AmericanasImg} width={150} />
-                        <CardLojas image={PontoFrioImg} width={150} />
-                        <CardLojas image={ExtraImg} width={120} />
-                        <CardLojas image={CasasBahiaImg} width={150} />
-                        <CardLojas image={MagazineImg} width={120} />
-                        <CardLojas image={AmericanasImg} width={150} />
-                        <CardLojas image={PontoFrioImg} width={150} />
-                        <CardLojas image={ExtraImg} width={120} />
-                     </div>
+            </div>
+            <div className="py-14 relative max-w-6xl mx-auto">
+               <div className="w-24 h-[200px] blur-md bg-primary -left-8 absolute top-0 z-10" />
+               <div className="w-24 h-[200px] blur-md bg-primary -right-4 md:-right-8 absolute top-0 z-10" />
+               <div className={styles.container}>
+                  <div className={styles.photobanner}>
+                     <CardLojas image={CasasBahiaImg} width={150} />
+                     <CardLojas image={MagazineImg} width={120} />
+                     <CardLojas image={AmericanasImg} width={150} />
+                     <CardLojas image={PontoFrioImg} width={150} />
+                     <CardLojas image={ExtraImg} width={120} />
+                     <CardLojas image={CasasBahiaImg} width={150} />
+                     <CardLojas image={MagazineImg} width={120} />
+                     <CardLojas image={AmericanasImg} width={150} />
+                     <CardLojas image={PontoFrioImg} width={150} />
+                     <CardLojas image={ExtraImg} width={120} />
                   </div>
                </div>
             </div>
@@ -233,11 +233,11 @@ const Home: NextPage = () => {
                   <div className="flex flex-col items-center">
                      <Image src={GirlBuyPhone} alt="GirlBuyPhone" />
 
-                     <div className="flex flex-col md:w-2/3">
+                     <div className="flex flex-col">
                         <h1 className="font-semibold text-xl">•Pedido</h1>
-                        <h2>
+                        <span className="max-w-xs">
                            O cliente realiza o pedido do produto em nosso site.
-                        </h2>
+                        </span>
                      </div>
                   </div>
                   <div className="flex flex-col items-center relative">
@@ -251,14 +251,14 @@ const Home: NextPage = () => {
                         alt="JuninhoBuyPhone"
                      />
 
-                     <div className="flex flex-col md:w-1/2">
+                     <div className="flex flex-col">
                         <h1 className="font-semibold text-xl">
                            •Intermediação
                         </h1>
-                        <h2>
+                        <span className="max-w-xs">
                            Com a ajuda da tecnologia nós notificamos a venda em
                            nosso canal de associados.
-                        </h2>
+                        </span>
                      </div>
                   </div>
                </div>
@@ -267,10 +267,10 @@ const Home: NextPage = () => {
                   <div className="md:absolute flex w-full justify-center md:justify-end md:-top-10 md:-left-36">
                      <Image src={Arrow2} alt="Arrow 2" />
                   </div>
-                  <div className="absolute hidden md:flex w-full justify-center bottom-2 right-28">
+                  <div className="absolute hidden md:flex w-full justify-center -bottom-8 right-28">
                      <Image src={Arrow3} alt="Arrow3" />
                   </div>
-                  <div className="flex flex-col md:absolute md:left-0 items-center md:pt-52 text-primary">
+                  <div className="flex flex-col md:absolute md:left-0 items-center md:mt-64 text-primary">
                      <Image
                         src={Juninho2CartPhone}
                         quality={100}
@@ -279,9 +279,9 @@ const Home: NextPage = () => {
 
                      <div className="flex flex-col text-base-100 md:text-primary">
                         <h1 className="font-semibold text-xl">•Pedido</h1>
-                        <h2>
+                        <span className="max-w-xs">
                            O cliente realiza o pedido do produto em nosso site.
-                        </h2>
+                        </span>
                      </div>
                   </div>
 
@@ -298,12 +298,12 @@ const Home: NextPage = () => {
                         height={300}
                      />
 
-                     <div className="flex flex-col md:w-1/2">
+                     <div className="flex flex-col">
                         <h1 className="font-semibold text-xl">•Match</h1>
-                        <h2>
+                        <span className="max-w-xs">
                            Nosso associado reserva o pedido em poucos minutos
                            após a notificação.
-                        </h2>
+                        </span>
                      </div>
                   </div>
                </div>
@@ -331,10 +331,10 @@ const Home: NextPage = () => {
 
                      <div className="flex flex-col">
                         <h1 className="font-semibold text-xl">•Logística</h1>
-                        <h2>
+                        <span className="max-w-xs">
                            Nossa equipe recebe o produto para conferência e
                            despacha para o endereço de nosso cliente.
-                        </h2>
+                        </span>
                      </div>
                   </div>
                   <div className="hidden md:flex justify-center w-full absolute bottom-28 mr-24">
@@ -344,7 +344,7 @@ const Home: NextPage = () => {
                      <Image src={Arrow2} alt="Arrow2" />
                   </div>
                   <div className="flex flex-col gap-8">
-                     <div className="flex flex-col md:items-start items-center max-w-md mx-auto text-primary">
+                     <div className="flex flex-col md:items-start items-center max-w-md mx-auto text-primary md:mt-8">
                         <Image
                            src={Girl2BuyPhone}
                            quality={100}
@@ -355,10 +355,10 @@ const Home: NextPage = () => {
                            <h1 className="font-semibold text-xl">
                               •Recebimento
                            </h1>
-                           <h2>
+                           <span className="max-w-xs">
                               O cliente recebe nosso produto em um prazo médio
                               de 10 dias após a confirmação do pagamento.
-                           </h2>
+                           </span>
                         </div>
                      </div>
 
@@ -376,12 +376,106 @@ const Home: NextPage = () => {
                            <h1 className="font-semibold text-xl">
                               •Ganho de milhas
                            </h1>
-                           <h2>
+                           <span className="max-w-xs">
                               Nosso associado recebe as milhas ou pontos ganhos
                               com a compra e pode usar como quiser.
-                           </h2>
+                           </span>
                         </div>
                      </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="depoimentos" className="bg-base-200 w-full">
+            <div className="max-w-6xl mx-auto px-4 w-full pt-16 pb-10">
+               <div className="text-center flex flex-col items-center">
+                  <h1 className="text-primary/10 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
+                     Depoimentos
+                  </h1>
+                  <h2 className="text-primary uppercase tracking-widest text-xl font-bold md:mt-6">
+                     de alguns de nossos clientes
+                  </h2>
+               </div>
+               <Carousel
+                  infiniteLoop
+                  autoPlay
+                  interval={5000}
+                  showIndicators={false}
+                  swipeable={false}
+                  showStatus={false}
+                  showThumbs={false}
+                  className="max-w-6xl mx-auto"
+                  renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                     hasPrev && (
+                        <button
+                           type="button"
+                           onClick={onClickHandler}
+                           title={label}
+                           className="btn btn-circle border-transparent text-black bg-transparent absolute z-10 top-[40%] left-4 text-xl"
+                        >
+                           ❮
+                        </button>
+                     )
+                  }
+                  renderArrowNext={(onClickHandler, hasNext, label) =>
+                     hasNext && (
+                        <button
+                           type="button"
+                           onClick={onClickHandler}
+                           title={label}
+                           className="btn btn-circle border-transparent text-black bg-transparent absolute z-10 top-[40%] right-4 text-xl"
+                        >
+                           ❯
+                        </button>
+                     )
+                  }
+               >
+                  <CardDepoiments
+                     name="Anna Brisa"
+                     instagram="www.instagram.com/annabrisaa"
+                     linkVideo="https://www.youtube.com/embed/pMftaexP7RY?autoplay=0&controls=0&showinfo=0&playlist=pMftaexP7RY"
+                     image={AnaImg}
+                     profissional="Digital influencer"
+                     depoiment="Foi uma experiência muito boa de compra!"
+                  />
+                  <CardDepoiments
+                     name="Brendha Crizel"
+                     instagram="www.instagram.com/brendhacrizel/"
+                     linkVideo="https://www.youtube.com/embed/VswfBYbeWFU?autoplay=0&controls=0&showinfo=0&playlist=VswfBYbeWFU"
+                     image={AnaImg}
+                     profissional="Criador(a) de conteúdo digital"
+                     depoiment="A BuyPhone tem o melhor preço do mercado e você pode escolher como quer pagar"
+                  />
+                  <CardDepoiments
+                     name="Bárbara Brunca"
+                     instagram="www.instagram.com/barbarabrunca/"
+                     linkVideo="https://www.youtube.com/embed/OhEwSZSrRUY?autoplay=0&controls=0&showinfo=0&playlist=OhEwSZSrRUY"
+                     image={AnaImg}
+                     profissional="Criador(a) de conteúdo digital"
+                     depoiment="É uma nova forma muito legal, de comprar produtos da apple!"
+                  />
+               </Carousel>
+            </div>
+         </div>
+
+         <div id="contato" className="bg-primary w-full">
+            <div className="max-w-6xl mx-auto px-4 w-full flex flex-col py-16">
+               <div className="flex flex-col md:flex-row items-center justify-between">
+                  <div className="flex justify-start max-w-lg">
+                     <div className="flex flex-col items-center text-center md:text-start md:items-start gap-4">
+                        <h1 className="text-3xl text-base-100">
+                           Compre pelo Whatsapp
+                           <br /> Tire suas duvidas juntamente com o nosso
+                           consultor.
+                        </h1>
+                        <button className="btn btn-success border-none rounded-3xl bg-[#02900F] text-base-100 w-44">
+                           Clique aqui
+                        </button>
+                     </div>
+                  </div>
+                  <div className="flex w-64 mt-10 justify-end md:-mt-32">
+                     <Image src={WhatsappImg} quality={100} alt="WhatsappImg" />
                   </div>
                </div>
             </div>
@@ -424,99 +518,6 @@ const Home: NextPage = () => {
                      utilizados."
                   />
                </div>
-            </div>
-         </div>
-
-         <div id="contato" className="bg-primary w-full">
-            <div className="max-w-6xl mx-auto px-4 w-full flex flex-col py-16">
-               <div className="flex flex-col md:flex-row items-center justify-between">
-                  <div className="flex justify-start max-w-lg">
-                     <div className="flex flex-col items-center text-center md:text-start md:items-start gap-4">
-                        <h1 className="text-3xl text-base-100">
-                           Compre pelo Whatsapp
-                           <br /> Tire suas duvidas juntamente com o nosso
-                           consultor.
-                        </h1>
-                        <button className="btn btn-success border-none rounded-3xl bg-[#02900F] text-base-100 w-44">
-                           Clique aqui
-                        </button>
-                     </div>
-                  </div>
-                  <div className="flex w-64 mt-10 justify-end md:-mt-32">
-                     <Image src={WhatsappImg} quality={100} alt="WhatsappImg" />
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div id="depoimentos" className="bg-base-100 w-full">
-            <div className="max-w-6xl mx-auto px-4 w-full pt-16 pb-10">
-               <div className="text-center flex flex-col items-center">
-                  <h1 className="text-primary/10 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
-                     Depoimentos
-                  </h1>
-                  <h2 className="text-primary uppercase tracking-widest text-xl font-bold md:mt-6">
-                     de alguns de nossos clientes
-                  </h2>
-               </div>
-               <Carousel
-                  infiniteLoop
-                  autoPlay
-                  interval={5000}
-                  showIndicators={false}
-                  swipeable={false}
-                  showStatus={false}
-                  showThumbs={false}
-                  className="max-w-6xl mx-auto"
-                  renderArrowPrev={(onClickHandler, hasPrev, label) =>
-                     hasPrev && (
-                        <button
-                           type="button"
-                           onClick={onClickHandler}
-                           title={label}
-                           className="btn btn-circle border-transparent text-black bg-base-100 shadow-md shadow-black/40 absolute z-10 top-[40%] left-4"
-                        >
-                           ❮
-                        </button>
-                     )
-                  }
-                  renderArrowNext={(onClickHandler, hasNext, label) =>
-                     hasNext && (
-                        <button
-                           type="button"
-                           onClick={onClickHandler}
-                           title={label}
-                           className="btn btn-circle border-transparent text-black bg-base-100 shadow-md shadow-black/40 absolute z-10 top-[40%] right-4"
-                        >
-                           ❯
-                        </button>
-                     )
-                  }
-               >
-                  <CardDepoiments
-                     name="Anna Brisa"
-                     instagram="www.instagram.com/annabrisaa"
-                     linkVideo="https://www.youtube.com/embed/pMftaexP7RY?autoplay=0&controls=0&showinfo=0&playlist=pMftaexP7RY"
-                     image={AnaImg}
-                     profissional="Digital influencer"
-                     depoiment="Foi uma experiência muito boa de compra!"
-                  />
-                  <CardDepoiments
-                     name="Brendha Crizel"
-                     instagram="www.instagram.com/brendhacrizel/"
-                     linkVideo="https://www.youtube.com/embed/VswfBYbeWFU?autoplay=0&controls=0&showinfo=0&playlist=VswfBYbeWFU"
-                     image={AnaImg}
-                     profissional="Criador(a) de conteúdo digital"
-                     depoiment="A BuyPhone tem o melhor preço do mercado e você pode escolher como quer pagar"
-                  />
-                  <CardDepoiments
-                     name="Bárbara Brunca"
-                     instagram="www.instagram.com/barbarabrunca/"
-                     linkVideo="https://www.youtube.com/embed/OhEwSZSrRUY?autoplay=0&controls=0&showinfo=0&playlist=OhEwSZSrRUY"
-                     image={AnaImg}
-                     profissional="Criador(a) de conteúdo digital"
-                     depoiment="É uma nova forma muito legal, de comprar produtos da apple!"
-                  />
-               </Carousel>
             </div>
          </div>
          <div className="bg-primary w-full">
