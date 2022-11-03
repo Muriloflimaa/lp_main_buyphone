@@ -6,8 +6,11 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import { Divider } from 'react-daisyui'
 import 'react-accessible-accordion/dist/fancy-example.css'
+import { Accordion } from 'react-accessible-accordion'
 
 // COMPONENTS
+import CardCompare from '../components/CardCompare'
+import Footer from '../components/Footer'
 import { CardDepoiments } from '../components/CardDepoiment'
 import AccordionComponent from '../components/AccordionComponent'
 import styles from '../styles/styles.module.scss'
@@ -44,9 +47,9 @@ import AnaImg from '../assets/images/anabrisa.jpg'
 import TikTokPng from '../assets/images/tiktok.png'
 import InstagramPng from '../assets/images/instagram.png'
 import TwitterPng from '../assets/images/twitter.png'
-import CardCompare from '../components/CardCompare'
-import { Accordion } from 'react-accessible-accordion'
-import Footer from '../components/Footer'
+import LinkedinPng from '../assets/images/linkedin.png'
+import ArrowWhitePng from '../assets/images/arrowmobilewhite.png'
+import ArrowPurplePng from '../assets/images/arrowmobilepurple.png'
 
 const Home: NextPage = () => {
    const data = [
@@ -75,7 +78,7 @@ const Home: NextPage = () => {
    return (
       <>
          <NavBar />
-         <div className="bg-primary">
+         <div id="main" className="bg-primary">
             <div className="w-full pt-36 mx-auto max-w-6xl px-4">
                <div className="w-full flex flex-col-reverse md:flex-row justify-between">
                   <div className="flex flex-col text-base-100 ">
@@ -163,21 +166,23 @@ const Home: NextPage = () => {
                   </div>
                </div>
             </div>
-            <div className="py-14 relative max-w-6xl mx-auto">
-               <div className="w-24 h-[200px] blur-md bg-primary -left-8 absolute top-0 z-10" />
-               <div className="w-24 h-[200px] blur-md bg-primary -right-4 md:-right-8 absolute top-0 z-10" />
-               <div className={styles.container}>
-                  <div className={styles.photobanner}>
-                     <CardLojas image={CasasBahiaImg} width={150} />
-                     <CardLojas image={MagazineImg} width={120} />
-                     <CardLojas image={AmericanasImg} width={150} />
-                     <CardLojas image={PontoFrioImg} width={150} />
-                     <CardLojas image={ExtraImg} width={120} />
-                     <CardLojas image={CasasBahiaImg} width={150} />
-                     <CardLojas image={MagazineImg} width={120} />
-                     <CardLojas image={AmericanasImg} width={150} />
-                     <CardLojas image={PontoFrioImg} width={150} />
-                     <CardLojas image={ExtraImg} width={120} />
+            <div className="mx-4">
+               <div className="py-14 px-4 relative max-w-6xl mx-auto">
+                  <div className="w-24 h-[200px] blur-md bg-primary -left-8 absolute top-0 z-10" />
+                  <div className="w-24 h-[200px] blur-md bg-primary -right-4 md:-right-8 absolute top-0 z-10" />
+                  <div className={styles.container}>
+                     <div className={styles.photobanner}>
+                        <CardLojas image={CasasBahiaImg} width={150} />
+                        <CardLojas image={MagazineImg} width={120} />
+                        <CardLojas image={AmericanasImg} width={150} />
+                        <CardLojas image={PontoFrioImg} width={150} />
+                        <CardLojas image={ExtraImg} width={120} />
+                        <CardLojas image={CasasBahiaImg} width={150} />
+                        <CardLojas image={MagazineImg} width={120} />
+                        <CardLojas image={AmericanasImg} width={150} />
+                        <CardLojas image={PontoFrioImg} width={150} />
+                        <CardLojas image={ExtraImg} width={120} />
+                     </div>
                   </div>
                </div>
             </div>
@@ -229,36 +234,43 @@ const Home: NextPage = () => {
                   </h2>
                </div>
 
-               <div className="flex flex-col md:flex-row justify-around relative w-full text-base-100">
+               <div className="flex flex-col md:flex-row justify-around relative w-full text-base-100 mt-10 md:mt-0">
                   <div className="absolute hidden md:flex w-full justify-center -bottom-32">
                      <Image src={Arrow1} alt="Arrow1" />
                   </div>
                   <div className="flex flex-col items-center">
-                     <Image src={GirlBuyPhone} alt="GirlBuyPhone" />
+                     <Image
+                        className="max-w-[150px] md:max-w-none"
+                        src={GirlBuyPhone}
+                        alt="GirlBuyPhone"
+                     />
 
                      <div className="flex flex-col">
-                        <h1 className="font-semibold text-xl">•Pedido</h1>
-                        <span className="max-w-xs">
+                        <h1 className="font-semibold text-lg md:text-xl">
+                           •Pedido
+                        </h1>
+                        <span className="max-w-xs text-sm md:text-base">
                            O cliente realiza o pedido do produto em nosso site.
                         </span>
                      </div>
                   </div>
                   <div className="flex flex-col items-center relative">
-                     <div className="flex w-full justify-center md:hidden">
-                        <Image src={Arrow2} alt="Arrow2" />
+                     <div className="flex w-full h-36 justify-center md:hidden">
+                        <Image src={ArrowWhitePng} alt="Arrow2" />
                      </div>
 
                      <Image
+                        className="max-w-[150px] md:max-w-none"
                         src={JuninhoBuyPhone}
                         quality={100}
                         alt="JuninhoBuyPhone"
                      />
 
                      <div className="flex flex-col">
-                        <h1 className="font-semibold text-xl">
+                        <h1 className="font-semibold text-lg md:text-xl">
                            •Intermediação
                         </h1>
-                        <span className="max-w-xs">
+                        <span className="max-w-xs text-sm md:text-base">
                            Com a ajuda da tecnologia nós notificamos a venda em
                            nosso canal de associados.
                         </span>
@@ -267,33 +279,40 @@ const Home: NextPage = () => {
                </div>
 
                <div className="flex flex-col md:flex-row justify-end w-full relative md:mt-14 z-10 text-base-100">
-                  <div className="md:absolute flex w-full justify-center md:justify-end md:-top-10 md:-left-36">
+                  <div className="md:absolute hidden md:flex w-full justify-center md:justify-end md:-top-10 md:-left-36">
                      <Image src={Arrow2} alt="Arrow 2" />
                   </div>
                   <div className="absolute hidden md:flex w-full justify-center -bottom-8 right-28">
                      <Image src={Arrow3} alt="Arrow3" />
                   </div>
+                  <div className="flex w-full h-36 justify-center md:hidden">
+                     <Image src={ArrowWhitePng} alt="Arrow2" />
+                  </div>
                   <div className="flex flex-col md:absolute md:left-0 items-center md:mt-64 text-primary">
                      <Image
+                        className="max-w-[150px] md:max-w-none"
                         src={Juninho2CartPhone}
                         quality={100}
                         alt="Juninho2CartPhone"
                      />
 
                      <div className="flex flex-col text-base-100 md:text-primary">
-                        <h1 className="font-semibold text-xl">•Pedido</h1>
-                        <span className="max-w-xs">
+                        <h1 className="font-semibold text-lg md:text-xl">
+                           •Pedido
+                        </h1>
+                        <span className="max-w-xs text-sm md:text-base">
                            O cliente realiza o pedido do produto em nosso site.
                         </span>
                      </div>
                   </div>
 
                   <div className="flex flex-col items-center max-w-md mx-auto md:mx-0 text-base-100 md:pt-14 md:mr-48">
-                     <div className="flex w-full justify-center md:hidden">
-                        <Image src={Arrow2} alt="Arrow2" />
+                     <div className="flex w-full h-36 justify-center md:hidden">
+                        <Image src={ArrowWhitePng} alt="Arrow2" />
                      </div>
 
                      <Image
+                        className="max-w-[150px] md:max-w-none"
                         src={Juninho2BuyPhone}
                         quality={100}
                         alt="Juninho2BuyPhone"
@@ -302,8 +321,10 @@ const Home: NextPage = () => {
                      />
 
                      <div className="flex flex-col">
-                        <h1 className="font-semibold text-xl">•Match</h1>
-                        <span className="max-w-xs">
+                        <h1 className="font-semibold text-lg md:text-xl">
+                           •Match
+                        </h1>
+                        <span className="max-w-xs text-sm md:text-base">
                            Nosso associado reserva o pedido em poucos minutos
                            após a notificação.
                         </span>
@@ -322,19 +343,22 @@ const Home: NextPage = () => {
                </div>
 
                <div className="flex flex-col md:flex-row items-center md:mt-16 justify-around">
-                  <div className="flex w-full justify-center md:hidden">
-                     <Image src={Arrow2} alt="Arrow2" />
+                  <div className="flex w-full h-36 justify-center md:hidden">
+                     <Image src={ArrowPurplePng} alt="Arrow2" />
                   </div>
                   <div className="flex flex-col md:ml-10 md:items-start items-center max-w-md mx-auto text-primary">
                      <Image
+                        className="max-w-[150px] md:max-w-none"
                         src={Juninho3Post}
                         quality={100}
                         alt="Juninho2CartPhone"
                      />
 
                      <div className="flex flex-col">
-                        <h1 className="font-semibold text-xl">•Logística</h1>
-                        <span className="max-w-xs">
+                        <h1 className="font-semibold text-lg md:text-xl">
+                           •Logística
+                        </h1>
+                        <span className="max-w-xs text-sm md:text-base">
                            Nossa equipe recebe o produto para conferência e
                            despacha para o endereço de nosso cliente.
                         </span>
@@ -343,22 +367,23 @@ const Home: NextPage = () => {
                   <div className="hidden md:flex justify-center w-full absolute bottom-28 mr-24">
                      <Image src={Arrow6} alt="Arrow3" />
                   </div>
-                  <div className="flex w-full justify-center md:hidden">
-                     <Image src={Arrow2} alt="Arrow2" />
+                  <div className="flex w-full h-36 justify-center md:hidden">
+                     <Image src={ArrowPurplePng} alt="Arrow2" />
                   </div>
                   <div className="flex flex-col gap-8">
                      <div className="flex flex-col md:items-start items-center max-w-md mx-auto text-primary md:mt-8">
                         <Image
+                           className="max-w-[130px] md:max-w-none"
                            src={Girl2BuyPhone}
                            quality={100}
                            alt="Girl2BuyPhone"
                         />
 
                         <div className="flex flex-col">
-                           <h1 className="font-semibold text-xl">
+                           <h1 className="font-semibold text-lg md:text-xl">
                               •Recebimento
                            </h1>
-                           <span className="max-w-xs">
+                           <span className="max-w-xs text-sm md:text-base">
                               O cliente recebe nosso produto em um prazo médio
                               de 10 dias após a confirmação do pagamento.
                            </span>
@@ -366,20 +391,21 @@ const Home: NextPage = () => {
                      </div>
 
                      <div className="flex flex-col md:items-start items-center max-w-md mx-auto text-primary">
-                        <div className="flex w-full justify-center md:hidden">
-                           <Image src={Arrow2} alt="Arrow2" />
+                        <div className="flex w-full h-36 justify-center md:hidden">
+                           <Image src={ArrowPurplePng} alt="Arrow2" />
                         </div>
                         <Image
+                           className="max-w-[150px] md:max-w-none"
                            src={Juninho2AirPlane}
                            quality={100}
                            alt="Juninho2AirPlane"
                         />
 
                         <div className="flex flex-col">
-                           <h1 className="font-semibold text-xl">
+                           <h1 className="font-semibold text-lg md:text-xl">
                               •Ganho de milhas
                            </h1>
-                           <span className="max-w-xs">
+                           <span className="max-w-xs text-sm md:text-base">
                               Nosso associado recebe as milhas ou pontos ganhos
                               com a compra e pode usar como quiser.
                            </span>
@@ -461,7 +487,7 @@ const Home: NextPage = () => {
                </Carousel>
             </div>
          </div>
-         <div id="compare" className="bg-base-200 w-full">
+         <div id="social" className="bg-base-200 w-full">
             <div className="max-w-6xl mx-auto pt-10 md:py-24 px-4 flex flex-col">
                <div className="text-center flex flex-col items-center">
                   <h1 className="text-primary/10 uppercase text-5xl md:text-8xl font-bold md:absolute md:leading-3">
@@ -477,19 +503,23 @@ const Home: NextPage = () => {
                      title="Instagram"
                      paragraph="Seu match perfeito!
                      Compre seu iPhone com o melhor preço do mercado."
+                     link="https://www.instagram.com/buyphone.match/"
                   />
                   <CardCompare
-                     image={InstagramPng}
+                     link="https://www.linkedin.com/company/buyphonematch"
+                     image={LinkedinPng}
                      title="LinkedIn"
                      paragraph="Seu match perfeito!
                      Compre seu iPhone com o melhor preço do mercado."
                   />
                   <CardCompare
+                     link="https://twitter.com/buyphoneoficial"
                      image={TwitterPng}
                      title="Twitter"
                      paragraph="O melhor de tudo isso, é que conseguimos SEMPRE cobrir os preços das principais lojas do Brasil."
                   />
                   <CardCompare
+                     link="https://www.tiktok.com/@buyphoneoficial"
                      image={TikTokPng}
                      title="TikTok"
                      paragraph="Oferecemos suporte acessível com atendimento humanizado através dos canais de comunicação mais utilizados."

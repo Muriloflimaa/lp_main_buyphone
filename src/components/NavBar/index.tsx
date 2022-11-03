@@ -24,12 +24,14 @@ export default function NavBar({ navbar }: navBarProps) {
                <div className="navbar bg-primary/90">
                   <div className="max-w-6xl mx-auto w-full px-4">
                      <div className="flex-1">
-                        <Image
-                           src={LogoActiveImg}
-                           alt="logo"
-                           width={140}
-                           className="object-contain"
-                        />
+                        <a href="#main" className="font-medium">
+                           <Image
+                              src={LogoActiveImg}
+                              alt="logo"
+                              width={140}
+                              className="object-contain"
+                           />
+                        </a>
                      </div>
 
                      <div className="flex-none hidden md:flex">
@@ -42,8 +44,14 @@ export default function NavBar({ navbar }: navBarProps) {
                            </li>
 
                            <li>
-                              <a href="#compare" className="font-medium">
-                                 Diferenciais
+                              <a href="#depoimentos" className="font-medium">
+                                 Depoimentos
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="#social" className="font-medium">
+                                 Redes sociais
                               </a>
                            </li>
 
@@ -54,14 +62,10 @@ export default function NavBar({ navbar }: navBarProps) {
                            </li>
 
                            <li>
-                              <a href="#depoimentos" className="font-medium">
-                                 Depoimentos
+                              <a href="#compare" className="font-medium">
+                                 Diferenciais
                               </a>
                            </li>
-
-                           {/* <li>
-                              <a className="font-medium">Blog</a>
-                           </li> */}
 
                            <a href="https://www.buyphone.com.br/">
                               <button className="btn bg-base-100 normal-case rounded-xl transition-all duration-300 text-primary">
@@ -97,33 +101,35 @@ export default function NavBar({ navbar }: navBarProps) {
             className="w-auto h-auto bg-primary"
          >
             <ul className="menu p-5 items-center text-white">
-               <li className="p-2" onClick={toggleDrawer}>
+               <li onClick={toggleDrawer}>
                   <a href="#entenda" className="font-medium">
-                     Entenda melhor
+                     Como funciona
                   </a>
                </li>
 
-               <li className="p-2" onClick={toggleDrawer}>
-                  <a href="#compare" className="font-medium">
-                     Diferenciais
-                  </a>
-               </li>
-
-               <li className="p-2" onClick={toggleDrawer}>
-                  <a href="#contato" className="font-medium">
-                     Contato
-                  </a>
-               </li>
-
-               <li className="p-2" onClick={toggleDrawer}>
+               <li onClick={toggleDrawer}>
                   <a href="#depoimentos" className="font-medium">
                      Depoimentos
                   </a>
                </li>
 
-               {/* <li className="p-2" onClick={toggleDrawer}>
-                  <a className="font-medium">Blog</a>
-               </li> */}
+               <li onClick={toggleDrawer}>
+                  <a href="#social" className="font-medium">
+                     Redes sociais
+                  </a>
+               </li>
+
+               <li onClick={toggleDrawer}>
+                  <a href="#contato" className="font-medium">
+                     Contato
+                  </a>
+               </li>
+
+               <li onClick={toggleDrawer}>
+                  <a href="#compare" className="font-medium">
+                     Diferenciais
+                  </a>
+               </li>
 
                <a href="https://www.buyphone.com.br/">
                   <button className="btn bg-white text-primary">

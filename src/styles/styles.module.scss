@@ -57,13 +57,18 @@
    display: flex;
    gap: 1rem;
    white-space: nowrap;
-   background-image: url('../assets/images/marktcomponent.png') repeat-x;
    animation: bannermove 30s linear infinite;
+}
 
-   @media only screen and (min-width: 600px) {
-      &:hover {
-         animation-play-state: paused;
-      }
+@media only screen and (max-width: 600px) {
+   .photobanner {
+      position: absolute;
+      width: 200%;
+      height: 100px;
+      overflow: hidden;
+      display: flex;
+      gap: 1rem;
+      animation: bannermove 5s linear infinite;
    }
 }
 
