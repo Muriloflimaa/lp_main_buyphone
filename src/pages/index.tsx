@@ -597,9 +597,11 @@ const Home: NextPage = () => {
                            <br /> Tire suas duvidas juntamente com o nosso
                            consultor.
                         </h1>
-                        <button className="btn btn-success border-none rounded-3xl bg-[#02900F] text-base-100 w-44">
-                           Clique aqui
-                        </button>
+                        <a target={'_blank'} href="https://wa.me/5518981367275">
+                           <button className="btn btn-success border-none rounded-3xl bg-[#02900F] text-base-100 w-44">
+                              Clique aqui
+                           </button>
+                        </a>
                      </div>
                   </div>
                   <div className="flex w-64 mt-10 justify-end md:-mt-32">
