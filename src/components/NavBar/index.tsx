@@ -59,9 +59,9 @@ export default function NavBar({ navbar }: navBarProps) {
                               </a>
                            </li>
 
-                           <li>
+                           {/* <li>
                               <a className="font-medium">Blog</a>
-                           </li>
+                           </li> */}
 
                            <a href="https://www.buyphone.com.br/">
                               <button className="btn bg-base-100 normal-case rounded-xl transition-all duration-300 text-primary">
@@ -69,6 +69,7 @@ export default function NavBar({ navbar }: navBarProps) {
                               </button>
                            </a>
                         </ul>
+                        j
                      </div>
                      <li className="block md:hidden" onClick={toggleDrawer}>
                         <svg
@@ -120,9 +121,9 @@ export default function NavBar({ navbar }: navBarProps) {
                   </a>
                </li>
 
-               <li className="p-2" onClick={toggleDrawer}>
+               {/* <li className="p-2" onClick={toggleDrawer}>
                   <a className="font-medium">Blog</a>
-               </li>
+               </li> */}
 
                <a href="https://www.buyphone.com.br/">
                   <button className="btn bg-white text-primary">
