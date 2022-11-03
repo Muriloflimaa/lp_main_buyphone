@@ -111,7 +111,7 @@ const Home: NextPage = () => {
                         <div
                            className={
                               'w-40 h-auto absolute -top-20 right-4 ' +
-                              styles.object2
+                              styles.object4
                            }
                         >
                            <Image
@@ -123,7 +123,7 @@ const Home: NextPage = () => {
                         <div
                            className={
                               'w-20 h-auto absolute left-0 lg:ml-[24%] bottom-0 mb-[40%] ' +
-                              styles.object4
+                              styles.object2
                            }
                         >
                            <Image
@@ -135,31 +135,31 @@ const Home: NextPage = () => {
                         <div
                            className={
                               'w-8 h-8 bg-[#EB0045] rounded-[100%] shadow-md shadow-black/30 absolute left-0 lg:ml-[30%] ml-[20%] bottom-0 mb-[30%] ' +
-                              styles.object5
-                           }
-                        />
-                        <div
-                           className={
-                              'w-12 h-12 bg-[#EB0045] rounded-[100%] shadow-md shadow-black/30 absolute right-12 bottom-0 top-0 mt-[30%] ' +
                               styles.object1
                            }
                         />
                         <div
                            className={
-                              'w-28 h-28 bg-[#EB0045] rounded-[100%] shadow-md shadow-black/30 absolute left-10 bottom-0 top-0 ' +
-                              styles.object2
-                           }
-                        />
-                        <div
-                           className={
-                              'w-20 h-20 bg-base-100/10 rounded-[100%] shadow-md shadow-black/30 absolute -left-10 bottom-0 top-0 mt-[50%] ' +
+                              'w-12 h-12 bg-[#EB0045] rounded-[100%] shadow-md shadow-black/30 absolute right-12 bottom-0 top-0 mt-[30%] ' +
                               styles.object3
                            }
                         />
                         <div
                            className={
+                              'w-28 h-28 bg-[#EB0045] rounded-[100%] shadow-md shadow-black/30 absolute left-10 bottom-0 top-0 ' +
+                              styles.object6
+                           }
+                        />
+                        <div
+                           className={
+                              'w-20 h-20 bg-base-100/10 rounded-[100%] shadow-md shadow-black/30 absolute -left-10 bottom-0 top-0 mt-[50%] ' +
+                              styles.object5
+                           }
+                        />
+                        <div
+                           className={
                               'w-20 h-20 md:w-32  md:h-32 bg-base-100/10 rounded-[100%] shadow-md shadow-black/30 absolute -right-3 lg:-right-8 bottom-10 ' +
-                              styles.object4
+                              styles.object7
                            }
                         />
                      </div>
