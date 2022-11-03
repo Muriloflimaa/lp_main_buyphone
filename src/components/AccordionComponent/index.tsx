@@ -16,7 +16,7 @@ interface AccordionProps {
 }
 const AccordionComponent = ({ title, paragraph }: AccordionProps) => {
    const [isOn, setIsOn] = useState(false)
-   console.log(isOn)
+
    return (
       <AccordionItem onClick={() => setIsOn(!isOn)}>
          <AccordionItemHeading>

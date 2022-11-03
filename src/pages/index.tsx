@@ -217,10 +217,6 @@ const Home: NextPage = () => {
                      </div>
                   </div>
                </div>
-               <div className="w-32 h-auto absolute -left-14 bottom-14 hidden md:block">
-                  <div className="w-32 h-32 -rotate-[40deg] border-[5px] border-base-100 rounded-3xl absolute ml-14 mt-2 "></div>
-                  <div className="w-32 h-32 -rotate-[40deg] border-[5px] border-base-100 rounded-3xl"></div>
-               </div>
             </div>
          </div>
          <div className="bg-primary relative py-4 pb-10">
@@ -599,10 +595,7 @@ const Home: NextPage = () => {
                      Dúvidas frequentes
                   </h2>
                </div>
-               <div className="w-32 h-auto absolute -left-24 top-10 hidden md:block ">
-                  <div className="w-32 h-32 -rotate-[40deg] border-[5px] border-base-100 rounded-3xl absolute ml-14 mt-2 "></div>
-                  <div className="w-32 h-32 -rotate-[40deg] border-[5px] border-base-100 rounded-3xl"></div>
-               </div>
+
                <Accordion
                   className="bg-base-100/10 my-20 rounded-md"
                   allowZeroExpanded={true}
