@@ -233,7 +233,7 @@ const Home: NextPage = () => {
                   <div className="bg-primary/20 w-20 h-[5px] rounded-3xl mt-4"></div>
                </div>
 
-               <div className="flex justify-center w-2/3 mx-auto mt-11">
+               <div className="flex justify-center w-full max-w-5xl mx-auto mt-11">
                   <div className="w-full flex justify-center">
                      <div className="w-full h-auto relative flex">
                         <div className="relative w-full h-full pb-[56.25%]">
@@ -270,9 +270,10 @@ const Home: NextPage = () => {
                   </div>
                   <div className="flex flex-col items-center">
                      <Image
-                        className="max-w-[150px] md:max-w-none"
+                        className="max-w-[120px] md:max-w-none"
                         src={GirlBuyPhone}
                         alt="GirlBuyPhone"
+                        quality={100}
                      />
 
                      <div className="flex flex-col">
@@ -403,7 +404,7 @@ const Home: NextPage = () => {
                   <div className="flex flex-col gap-8">
                      <div className="flex flex-col md:items-start items-center max-w-md mx-auto text-primary md:mt-8">
                         <Image
-                           className="max-w-[130px] md:max-w-none"
+                           className="max-w-[100px] md:max-w-none"
                            src={Girl2BuyPhone}
                            quality={100}
                            alt="Girl2BuyPhone"
