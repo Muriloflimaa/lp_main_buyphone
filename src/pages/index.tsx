@@ -69,24 +69,43 @@ const Home: NextPage = () => {
    //duvidas frequentes
    const data = [
       {
-         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+         title: 'Porque são tão baratos?',
          paragraph:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+            'Nós compramos através de pontos de cartão de crédito e milhas de nossos associados em promoções nas principais lojas do Brasil!            ',
       },
       {
-         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+         title: 'Os produtos possuem nota fiscal?',
          paragraph:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+            'Sim, enviamos uma declaração de conteúdo com a chave de acesso da NF-e emitida em nome do nosso associado pelas principais lojas (Magalu, Casas Bahia, Ponto, Extra, Americanas), para possíveis consultas no site da receita federal https://www.nfe.fazenda.gov.br/portal/consultaRecaptcha.aspx',
       },
       {
-         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+         title: 'Aparelhos tem garantia?',
          paragraph:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+            'Com os produtos da Apple você não precisa se preocupar com nota fiscal, pois assim que você ativa o iCloud, consegue ter acesso a todos os benefícios de garantia. Todos os aparelhos possuem garantia mundial de 1 ano da Apple.',
       },
       {
-         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+         title: 'Qual a forma de pagamento?',
          paragraph:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+            'Pix, cartão de crédito e pagamento personalizado (Entrada no PIX + parcelas no cartão).',
+      },
+      {
+         title: 'Qual prazo de entrega?',
+         paragraph:
+            'Assim que o pagamento é confirmado o prazo é de 7 a 15 dias úteis.',
+      },
+      {
+         title: 'Só trabalham com aparelhos novos?',
+         paragraph:
+            'Os produtos são novos (lacrados) não são de vitrine! Comprados nas principais lojas do Brasil.',
+      },
+      {
+         title: 'Qual endereço físico?',
+         paragraph:
+            'A BuyPhone é uma Startup, não somos uma loja física e trabalhamos de forma digital em todo o Brasil. O endereço de nossa operação, onde nossa equipe trabalha, fica localizado em R: Av Brasilia 2121 Sala 1116, Jardim Nova Yorque, Araçatuba-SP, CEP: 16018-000.',
+      },
+      {
+         title: 'Qual CNPJ da BuyPhone?         ',
+         paragraph: 'CNPJ: 45.679.637/0001-94.',
       },
    ]
 
