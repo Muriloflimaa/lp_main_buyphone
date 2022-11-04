@@ -472,7 +472,7 @@ const Home: NextPage = () => {
                            type="button"
                            onClick={onClickHandler}
                            title={label}
-                           className="btn btn-circle border-transparent text-black bg-transparent absolute z-10 top-[40%] left-4 text-xl"
+                           className="btn btn-circle border-transparent text-black/60 bg-transparent absolute z-10 top-[40%] left-4 text-xl"
                         >
                            ❮
                         </button>
@@ -484,7 +484,7 @@ const Home: NextPage = () => {
                            type="button"
                            onClick={onClickHandler}
                            title={label}
-                           className="btn btn-circle border-transparent text-black bg-transparent absolute z-10 top-[40%] right-4 text-xl"
+                           className="btn btn-circle border-transparent text-black/60 bg-transparent absolute z-10 top-[40%] right-4 text-xl"
                         >
                            ❯
                         </button>
